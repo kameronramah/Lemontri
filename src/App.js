@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { auth } from "./firebase/firebase";
 import './App.css';
+import Home from './Pages/Home';
+import SignIn from "./Pages/Sign-in";
+import SignUp from "./Pages/Sign-up";
 
-function App() {
+const App = () => {
+  const [deconnexion, setDeconnexion] = useState(null);
+
+  auth.onAuthStateChanged((user) => {
+    if(user) {
+      setDeconnexion(null);
+    }
+    else {
+      setDeconnexion(<li> <Link to="/" onClick={e => auth.signOut()}>Déconnexion</Link> </li>)
+    }
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Accueil</Link>
+              </li>
+              <li>
+                <Link to="/sign-in">Connexion</Link>
+              </li>
+              <li>
+                <Link to="/sign-up">Inscription</Link>
+              </li>
+              {deconnexion}
+            </ul>
+          </nav>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/sign-in" element={<SignIn/>} />
+            <Route path="/sign-up" element={<SignUp/>} />
+          </Routes>
+      </Router>
   );
 }
 
