@@ -3,18 +3,20 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { auth } from "./firebase/firebase";
 import './App.css';
 import Home from './Pages/Home';
-import SignIn from "./Pages/Sign-in";
-import SignUp from "./Pages/Sign-up";
+import SignIn from "./Pages/Authentication/Sign-in";
+import SignUp from "./Pages/Authentication/Sign-up";
+import CompanyCode from "./Pages/Authentication/CompanyCode";
+import EmailVerification from "./Pages/Authentication/EmailVerification";
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
 
   auth.onAuthStateChanged((user) => {
     if(user) {
-      setDeconnexion(null);
+      setDeconnexion(<li> <Link onClick={e => auth.signOut()}>Déconnexion</Link> </li>)
     }
     else {
-      setDeconnexion(<li> <Link to="/" onClick={e => auth.signOut()}>Déconnexion</Link> </li>)
+      setDeconnexion(null);
     }
   })
 
@@ -22,15 +24,6 @@ const App = () => {
       <Router>
           <nav>
             <ul>
-              <li>
-                <Link to="/">Accueil</Link>
-              </li>
-              <li>
-                <Link to="/sign-in">Connexion</Link>
-              </li>
-              <li>
-                <Link to="/sign-up">Inscription</Link>
-              </li>
               {deconnexion}
             </ul>
           </nav>
@@ -38,6 +31,8 @@ const App = () => {
             <Route path="/" element={<Home/>} />
             <Route path="/sign-in" element={<SignIn/>} />
             <Route path="/sign-up" element={<SignUp/>} />
+            <Route path="/company-code" element={<CompanyCode/>} />
+            <Route path="/email-verification" element={<EmailVerification/>} />
           </Routes>
       </Router>
   );
