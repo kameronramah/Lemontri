@@ -5,6 +5,7 @@ import './App.css';
 import Home from './Pages/Home';
 import SignIn from "./Pages/Sign-in";
 import SignUp from "./Pages/Sign-up";
+import Devis from './Pages/Devis';
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
@@ -31,6 +32,9 @@ const App = () => {
               <li>
                 <Link to="/sign-up">Inscription</Link>
               </li>
+              <li>
+              <Link to="/Devis">Devis</Link>
+              </li>
               {deconnexion}
             </ul>
           </nav>
@@ -38,6 +42,7 @@ const App = () => {
             <Route path="/" element={<Home/>} />
             <Route path="/sign-in" element={<SignIn/>} />
             <Route path="/sign-up" element={<SignUp/>} />
+            <Route path="/devis" element={<Devis/>} />
           </Routes>
       </Router>
   );

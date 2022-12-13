@@ -12,6 +12,7 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     const createUser = (event, email, password, name, lastname) => {
+        
         createUserWithEmailAndPassword(auth, email, password)
         .then( async (userRecord) => {
             await setDoc(doc(db, 'users', userRecord.user.uid), {
