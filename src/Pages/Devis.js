@@ -1,11 +1,9 @@
-
-
 import React from 'react'
 const Devis = () => {
   const [formStatus, setFormStatus] = React.useState('Send')
   const onSubmit = (e) => {
     e.preventDefault()
-    setFormStatus('Submitting...')
+    setFormStatus('Merci pour votre poste')
     const { nameEn, name, prenom, poste, email } = e.target.elements
     let conFom = {
       nameEn: nameEn.value,
