@@ -7,7 +7,12 @@ import SignIn from "./Pages/Authentication/Sign-in";
 import SignUp from "./Pages/Authentication/Sign-up";
 import CompanyCode from "./Pages/Authentication/CompanyCode";
 import EmailVerification from "./Pages/Authentication/EmailVerification";
-
+import Devis from './Pages/Devis';
+import Navbar from './Pages/Navbar';
+import Lesaviezvous from './Pages/Lesaviezvous';
+import Cours from './Pages/Cours';
+import Profil from './Pages/Profil';
+import Accueil from './Pages/Accueil';
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
 
@@ -22,17 +27,44 @@ const App = () => {
 
   return (
       <Router>
-          <nav>
+          <Navbar />
+          {/* <nav>
             <ul>
+              <li>
+                <Link to="/">Accueil</Link>
+              </li>
+              <li>
+                <Link to="/sign-in">Connexion</Link>
+              </li>
+              <li>
+                <Link to="/sign-up">Inscription</Link>
+              </li>
+              <li>
+              <Link to="/devis">Devis</Link>
+              </li>
+              <li>
+                <Link to="lesaviezvous">LE SAVIEZ VOUS</Link>
+              </li>
+              <li>
+                <Link to="cours">Cours </Link>
+              </li>
+              <li>
+                <Link to="profil">Profil </Link>
+              </li>
               {deconnexion}
             </ul>
-          </nav>
+          </nav> */}
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/sign-in" element={<SignIn/>} />
             <Route path="/sign-up" element={<SignUp/>} />
             <Route path="/company-code" element={<CompanyCode/>} />
             <Route path="/email-verification" element={<EmailVerification/>} />
+            <Route path="/devis"  element={<Devis/>} />
+            {/* <Route path="/lesaviezvous" element={<Lesaviezvous/>} /> */}
+            {/* <Route path="/cours" element={<Cours/>} /> */}
+            {/* <Route path="/profil" element={ <Profil/>} />  */}
+            <Route path="/accueil" element={<Accueil/>} />
           </Routes>
       </Router>
   );
