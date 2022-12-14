@@ -1,10 +1,10 @@
 import React from "react";
-import "./style/Options.css";
+import "../style/Options.css";
 
-const GlobalOptions = (props) => {
+const GlassOptions = (props) => {
     const options = [
-        { text: "C'est du verre.", handler: () => {}, id: 1 },
-        { text: "C'est un néon ou une ampoule.", handler: () => {}, id: 2 },
+        { text: "C'est du verre.", handler: () => {props.actionProvider.isGlassItem()}, id: 1 },
+        { text: "C'est un néon ou une ampoule.", handler: () => {props.actionProvider.isGlassAmpul()}, id: 2 },
         { text: "C’est autre chose.", handler: () => {}, id: 3 }
     ];
 
@@ -17,4 +17,4 @@ const GlobalOptions = (props) => {
     return <div className="options-container">{buttonsMarkup}</div>;
 };
 
-export default GlobalOptions;
+export default GlassOptions;

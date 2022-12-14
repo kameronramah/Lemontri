@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/Options.css";
+import "../style/Options.css";
 
 const MatterOptions = (props) => {
     const options = [
