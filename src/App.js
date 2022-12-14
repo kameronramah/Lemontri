@@ -7,6 +7,7 @@ import SignIn from "./Pages/Sign-in";
 import SignUp from "./Pages/Sign-up";
 import Devis from './Pages/Devis';
 import Navbar from './Pages/Navbar';
+import Lesaviezvous from './Pages/Lesaviezvous'
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
 
@@ -36,6 +37,9 @@ const App = () => {
               <li>
               <Link to="/devis">Devis</Link>
               </li>
+              <li>
+                <Link to="lesaviezvous">LE SAVIEZ VOUS</Link>
+              </li>
               
               {deconnexion}
             </ul>
@@ -45,6 +49,7 @@ const App = () => {
             <Route path="/sign-in" element={<SignIn/>} />
             <Route path="/sign-up" element={<SignUp/>} />
             <Route path="/devis"  element={<Devis/>} />
+            <Route path="/lesaviezvous" element={<Lesaviezvous/>} />
           </Routes>
 
       </Router>

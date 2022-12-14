@@ -9,7 +9,7 @@ export default function Navbar() {
       <ul>
         <CustomLink to="/#"><FaRegLightbulb /></CustomLink>
         <CustomLink to="/#"><FaGraduationCap /></CustomLink>
-        <CustomLink to="/Home"><FaHome /></CustomLink>
+        <CustomLink to="/#"><FaHome /></CustomLink>
         <CustomLink to="/#"><ImTrophy /></CustomLink>
         <CustomLink to="/#"><FaInfoCircle /></CustomLink>
       </ul>
