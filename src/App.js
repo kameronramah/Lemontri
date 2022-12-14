@@ -7,6 +7,7 @@ import SignIn from "./Pages/Authentication/Sign-in";
 import SignUp from "./Pages/Authentication/Sign-up";
 import CompanyCode from "./Pages/Authentication/CompanyCode";
 import EmailVerification from "./Pages/Authentication/EmailVerification";
+import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/sign-up" element={<SignUp/>} />
             <Route path="/company-code" element={<CompanyCode/>} />
             <Route path="/email-verification" element={<EmailVerification/>} />
+            <Route path="chatbot" element={<LemontriChatBot/>}/>
           </Routes>
       </Router>
   );
