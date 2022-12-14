@@ -7,7 +7,9 @@ import SignIn from "./Pages/Sign-in";
 import SignUp from "./Pages/Sign-up";
 import Devis from './Pages/Devis';
 import Navbar from './Pages/Navbar';
-import Lesaviezvous from './Pages/Lesaviezvous'
+import Lesaviezvous from './Pages/Lesaviezvous';
+import Cours from './Pages/Cours';
+import Profil from './Pages/Profil';
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
 
@@ -40,7 +42,12 @@ const App = () => {
               <li>
                 <Link to="lesaviezvous">LE SAVIEZ VOUS</Link>
               </li>
-              
+              <li>
+                <Link to="cours">Cours </Link>
+              </li>
+              <li>
+                <Link to="profil">Profil </Link>
+              </li>
               {deconnexion}
             </ul>
           </nav>
@@ -50,6 +57,8 @@ const App = () => {
             <Route path="/sign-up" element={<SignUp/>} />
             <Route path="/devis"  element={<Devis/>} />
             <Route path="/lesaviezvous" element={<Lesaviezvous/>} />
+            <Route path="/cours" element={<Cours/>} />
+            <Route path="/profil" element={ <Profil/>} /> 
           </Routes>
 
       </Router>
