@@ -4,7 +4,7 @@ import '../style/LogoTri.css';
 
 const GlassAmpulLogo = () => {
     return (
-        <div>
+        <div className="logos-tri">
             <img className="logo-tri" src={Ampoule} alt="Néons et ampoules" />
         </div>
     )

@@ -4,7 +4,7 @@ import '../style/LogoTri.css';
 
 const MetalBatteryLogo = () => {
     return (
-        <div>
+        <div className="logos-tri">
             <img className="logo-tri" src={Pile} alt="Piles et batteries" />
         </div>
     )

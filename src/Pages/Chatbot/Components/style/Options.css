@@ -5,9 +5,16 @@
 
 .option-button {
     margin: 5px;
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 8px;
-    border-color: blue;
-    background: transparent;
+    border: 0px;
+    background-color: #FFCC07;
     text-align: center;
+    font-size: 0.9rem;
 }
+
+.option-button:hover {
+    border: 2px solid black;
+}
+
+

@@ -4,7 +4,7 @@ import '../style/LogoTri.css';
 
 const PlasticGlassinePaperLogo = () => {
     return (
-        <div>
+        <div className="logos-tri">
             <img className="logo-tri" src={Glassine} alt="Glassine" />
         </div>
     )

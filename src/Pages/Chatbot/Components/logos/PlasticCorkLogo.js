@@ -4,7 +4,7 @@ import '../style/LogoTri.css';
 
 const PlasticCorkLogo = () => {
     return (
-        <div>
+        <div className="logos-tri">
             <img className="logo-tri" src={Bouchon} alt="Bouchon en plastique" />
         </div>
     )

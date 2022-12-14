@@ -18,9 +18,25 @@ import MetalBobbinLogo from "./Components/logos/MetalBobbinLogo";
 import MetalBatteryLogo from "./Components/logos/MetalBatteryLogo";
 import MetalElectronicWasteLogo from "./Components/logos/MetalElectronicWasteLogo";
 import MetalPrinterCartridgeLogo from "./Components/logos/MetalPrinterCartridgeLogo";
+import MetalAerosolLogo from "./Components/logos/MetalAerosolLogo";
+import PaperAbsorbentLogo from "./Components/logos/PaperAbsorbentLogo";
+import PaperLogo from "./Components/logos/PaperLogo";
+import PaperConfidentialLogo from "./Components/logos/PaperConfidentialLogo";
+import PaperCardBoardLogo from "./Components/logos/PaperCardBoardLogo";
+import PaperBookLogo from "./Components/logos/PaperBookLogo";
+import PaperFoldedCardboardLogo from "./Components/logos/PaperFoldedCardboardLogo";
+import PaperWoodLogo from "./Components/logos/PaperWoodLogo";
+import PaperCrateLogo from "./Components/logos/PaperCrateLogo";
+import NaturalWasteVegetalLogo from "./Components/logos/NaturalWasteVegetalLogo";
+import NaturalWasteFoodLogo from "./Components/logos/NaturalWasteFoodLogo";
+import NaturalWasteFertilizerLogo from "./Components/logos/NaturalWasteFertilizerLogo";
+import NaturalWasteOilLogo from "./Components/logos/NaturalWasteOilLogo";
+import NaturalWasteCoffeeLogo from "./Components/logos/NaturalWasteCoffeeLogo";
+import MedicalWasteMaskLogo from "./Components/logos/MedicalWasteMaskLogo";
+import MedicalWasteInfectiousLogo from "./Components/logos/MedicalWasteInfectiousLogo";
+import MoreInfosOptions from "./Components/options/MoreInfosOptions";
 
 const config = {
-    botName: "Citron",
     initialMessages: [
         createClientMessage('Bonjour, j’ai besoin d’aide.'),
         createChatBotMessage("Bonjour, dîtes nous quel zeste pouvons-nous effectuer pour vous aider ?", {
@@ -28,16 +44,17 @@ const config = {
         })],
     customStyles: {
         botMessageBox: {
-            backgroundColor: "#376B7E",
-        },
-        chatButton: {
-            backgroundColor: "#376B7E",
-        },
+            backgroundColor: "#D9D9D9",
+        }
     },
     widgets: [
         {
             widgetName: "globalOptions",
             widgetFunc: (props) => <GlobalOptions {...props} />
+        },
+        {
+            widgetName: "moreInfosOptions",
+            widgetFunc: (props) => <MoreInfosOptions {...props} />
         },
         {
             widgetName: "matterOptions",
@@ -110,6 +127,70 @@ const config = {
         {
             widgetName: "logoMetalPrinterCartridge",
             widgetFunc: (props) => <MetalPrinterCartridgeLogo {...props} />
+        },
+        {
+            widgetName: "logoMetalAerosol",
+            widgetFunc: (props) => <MetalAerosolLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperAbsorbent",
+            widgetFunc: (props) => <PaperAbsorbentLogo {...props} />
+        },
+        {
+            widgetName: "logoPaper",
+            widgetFunc: (props) => <PaperLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperConfidential",
+            widgetFunc: (props) => <PaperConfidentialLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperCardboard",
+            widgetFunc: (props) => <PaperCardBoardLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperBook",
+            widgetFunc: (props) => <PaperBookLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperFoldedCardboard",
+            widgetFunc: (props) => <PaperFoldedCardboardLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperWood",
+            widgetFunc: (props) => <PaperWoodLogo {...props} />
+        },
+        {
+            widgetName: "logoPaperCrate",
+            widgetFunc: (props) => <PaperCrateLogo {...props} />
+        },
+        {
+            widgetName: "logoNaturalWasteVegetal",
+            widgetFunc: (props) => <NaturalWasteVegetalLogo {...props} />
+        },
+        {
+            widgetName: "logoNaturalWasteFood",
+            widgetFunc: (props) => <NaturalWasteFoodLogo {...props} />
+        },
+        {
+            widgetName: "logoNaturalWasteFertilizer",
+            widgetFunc: (props) => <NaturalWasteFertilizerLogo {...props} />
+        },
+        {
+            widgetName: "logoNaturalWasteOil",
+            widgetFunc: (props) => <NaturalWasteOilLogo {...props} />
+        },
+        {
+            widgetName: "logoNaturalWasteCoffee",
+            widgetFunc: (props) => <NaturalWasteCoffeeLogo {...props} />
+        },
+        {
+            widgetName: "logoMedicalWasteMask",
+            widgetFunc: (props) => <MedicalWasteMaskLogo {...props} />
+        },
+        {
+            widgetName: "logoMedicalWasteInfectious",
+            widgetFunc: (props) => <MedicalWasteInfectiousLogo {...props} />
         },
     ]
 }

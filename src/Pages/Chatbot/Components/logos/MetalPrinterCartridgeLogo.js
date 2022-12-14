@@ -4,7 +4,7 @@ import '../style/LogoTri.css';
 
 const MetalPrinterCartridgeLogo = () => {
     return (
-        <div>
+        <div className="logos-tri">
             <img className="logo-tri" src={Cartouche} alt="Toners et cartouches" />
         </div>
     )

@@ -1,11 +1,11 @@
 import React from "react";
-import Aerosol from '../../../../img/Bom';
+import Aerosol from '../../../../img/BombeAerosol.webp';
 import '../style/LogoTri.css';
 
 const MetalPrinterCartridgeLogo = () => {
     return (
-        <div>
-            <img className="logo-tri" src={Cartouche} alt="Toners et cartouches" />
+        <div className="logos-tri">
+            <img className="logo-tri" src={Aerosol} alt="Bombes aérosols" />
         </div>
     )
 };

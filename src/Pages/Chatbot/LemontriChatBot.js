@@ -3,6 +3,7 @@ import 'react-chatbot-kit/build/main.css'
 import config from './config';
 import ActionProvider from "./ActionProvider";
 import MessageParser from "./MessageParser";
+import './Components/style/ChatBot.css';
 
 const LemontriChatBot = () => {
     
@@ -11,6 +12,7 @@ const LemontriChatBot = () => {
             config={config}
             actionProvider={ActionProvider}
             messageParser={MessageParser}
+            headerText="BESOIN D'AIDE ?"
         />
     )
 

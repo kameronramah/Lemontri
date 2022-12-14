@@ -4,8 +4,7 @@ import "../style/Options.css";
 const GlobalOptions = (props) => {
     const options = [
         { text: "J’aimerais savoir dans quelle poubelle jeter mon déchet", handler: () => {props.actionProvider.whichBin()}, id: 1 },
-        { text: "J’aimerais mieux comprendre l’application", handler: () => {}, id: 2 },
-        { text: "J’aimerais contacter LemonTri", handler: () => {}, id: 3 },
+        { text: "J’aimerais contacter LemonTri", handler: () => {props.actionProvider.contact()}, id: 2 },
     ];
 
     const buttonsMarkup = options.map((option) => (

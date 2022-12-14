@@ -7,7 +7,7 @@ const MetalOptions = (props) => {
         { text: "C’est une pile ou une batterie.", handler: () => {props.actionProvider.isMetalBattery()}, id: 2 },
         { text: "C’est un déchet électronique.", handler: () => {props.actionProvider.isMetalEW()}, id: 3 },
         { text: "C’est un toner ou une cartouche.", handler: () => {props.actionProvider.isMetalPrinterCartridge()}, id: 4 },
-        { text: "C’est une bombe aérosols.", handler: () => {}, id: 5 },
+        { text: "C’est une bombe aérosols.", handler: () => {props.actionProvider.isMetalAerosol()}, id: 5 },
         { text: "C’est autre chose.", handler: () => {}, id: 6 },
     ];
 
