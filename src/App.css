@@ -48,8 +48,7 @@
   bottom: 0;
   background: #FFCC07;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
   gap: 2rem;
   padding: 0 1rem;
 }
