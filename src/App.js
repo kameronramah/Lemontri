@@ -7,6 +7,7 @@ import SignIn from "./Pages/Authentication/Sign-in";
 import SignUp from "./Pages/Authentication/Sign-up";
 import CompanyCode from "./Pages/Authentication/CompanyCode";
 import EmailVerification from "./Pages/Authentication/EmailVerification";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
