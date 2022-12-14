@@ -1,6 +1,6 @@
 import React from 'react'
 const Devis = () => {
-  const [formStatus, setFormStatus] = React.useState('Send')
+  const [formStatus, setFormStatus] = React.useState('Contacter')
   const onSubmit = (e) => {
     e.preventDefault()
     setFormStatus('Merci pour votre poste')
@@ -42,7 +42,8 @@ const Devis = () => {
           </label>
           <input  type="email"  required />
         </div>
-        <button  type="submit">
+        <button  type="submit" >
+
           {formStatus}
         </button>
       </form>

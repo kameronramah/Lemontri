@@ -6,7 +6,6 @@ import Home from './Pages/Home';
 import SignIn from "./Pages/Sign-in";
 import SignUp from "./Pages/Sign-up";
 import Devis from './Pages/Devis';
-import HomeNc from './Pages/HomeNc';
 import Navbar from './Pages/Navbar';
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
@@ -22,6 +21,7 @@ const App = () => {
 
   return (
       <Router>
+          <Navbar />
           <nav>
             <ul>
               <li>
@@ -36,12 +36,7 @@ const App = () => {
               <li>
               <Link to="/devis">Devis</Link>
               </li>
-              <li>
-              <Link to="/HomeNc">Page accueil - Sans compte</Link>
-              </li>
-              <li>
-              <Link to="/Navbar">Navbar</Link>
-              </li>
+              
               {deconnexion}
             </ul>
           </nav>
@@ -50,9 +45,8 @@ const App = () => {
             <Route path="/sign-in" element={<SignIn/>} />
             <Route path="/sign-up" element={<SignUp/>} />
             <Route path="/devis"  element={<Devis/>} />
-            <Route path="/homeNc" elemnt={<HomeNc/>} />
-            <Route path="/navbar" element={<Navbar/>} />
           </Routes>
+
       </Router>
   );
 }
