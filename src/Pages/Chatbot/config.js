@@ -2,6 +2,11 @@ import { createChatBotMessage, createClientMessage } from 'react-chatbot-kit';
 import GlobalOptions from "./Components/GlobalOptions";
 import MatterOptions from "./Components/MatterOptions";
 import PlasticOptions from "./Components/PlasticOptions";
+import GlassOptions from "./Components/GlassOptions";
+import MetalOptions from "./Components/MetalOptions";
+import PaperCardBoardOptions from "./Components/PaperCardBoardOptions";
+import NaturalWasteOptions from "./Components/NaturalWasteOptions";
+import MedicalWasteOptions from "./Components/MedicalWasteOptions";
 
 const config = {
     botName: "Citron",
@@ -30,6 +35,26 @@ const config = {
         {
             widgetName: "plasticOptions",
             widgetFunc: (props) => <PlasticOptions {...props} />
+        },
+        {
+            widgetName: "glassOptions",
+            widgetFunc: (props) => <GlassOptions {...props} />
+        },
+        {
+            widgetName: "metalOptions",
+            widgetFunc: (props) => <MetalOptions {...props} />
+        },
+        {
+            widgetName: "pcOptions",
+            widgetFunc: (props) => <PaperCardBoardOptions {...props} />
+        },
+        {
+            widgetName: "naturalWasteOptions",
+            widgetFunc: (props) => <NaturalWasteOptions {...props} />
+        },
+        {
+            widgetName: "medicalWasteOptions",
+            widgetFunc: (props) => <MedicalWasteOptions {...props} />
         },
     ]
 }
