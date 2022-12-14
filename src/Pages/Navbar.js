@@ -6,11 +6,11 @@ import {ImTrophy } from "react-icons/im"
 export default function Navbar() {
   return (
     <nav className="nav">
-      <ul class="">
+      <ul>
+        <CustomLink to="/#"><FaRegLightbulb /></CustomLink>
+        <CustomLink to="/#"><FaGraduationCap /></CustomLink>
         <CustomLink to="/Home"><FaHome /></CustomLink>
         <CustomLink to="/#"><ImTrophy /></CustomLink>
-        <CustomLink to="/#"><FaGraduationCap /></CustomLink>
-        <CustomLink to="/#"><FaRegLightbulb /></CustomLink>
         <CustomLink to="/#"><FaInfoCircle /></CustomLink>
       </ul>
     </nav>
