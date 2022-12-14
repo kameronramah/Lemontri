@@ -10,6 +10,7 @@ import Navbar from './Pages/Navbar';
 import Lesaviezvous from './Pages/Lesaviezvous';
 import Cours from './Pages/Cours';
 import Profil from './Pages/Profil';
+import Accueil from './Pages/Accueil';
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
 
@@ -25,7 +26,7 @@ const App = () => {
   return (
       <Router>
           <Navbar />
-          <nav>
+          {/* <nav>
             <ul>
               <li>
                 <Link to="/">Accueil</Link>
@@ -50,7 +51,7 @@ const App = () => {
               </li>
               {deconnexion}
             </ul>
-          </nav>
+          </nav> */}
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/sign-in" element={<SignIn/>} />
@@ -59,6 +60,7 @@ const App = () => {
             <Route path="/lesaviezvous" element={<Lesaviezvous/>} />
             <Route path="/cours" element={<Cours/>} />
             <Route path="/profil" element={ <Profil/>} /> 
+            <Route path="/accueil" element={<Accueil/>} />
           </Routes>
 
       </Router>
