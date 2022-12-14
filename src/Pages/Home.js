@@ -9,10 +9,12 @@ const Home = () => {
         if(auth.currentUser !== null) {
             //Redirection vers la page d'accueil
         }
+
     })
 
     return (
         <div>
+            <h1>Les Bons Zestes Du Tri</h1>
             <button onClick={e => navigate('/sign-in')}>Se connecter</button>
             <button onClick={e => navigate('/accueil')}>Accéder sans compte</button>
         </div>
