@@ -4,6 +4,7 @@ import { auth, db } from "../../firebase/firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useLocation, useNavigate} from "react-router-dom";
 
+
 const SignUp = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -44,6 +45,7 @@ const SignUp = () => {
 
     return (
         <div>
+
             <form onSubmit={e => createUser(e, email, password, name, lastname)}>
                 <label>
                     Nom:

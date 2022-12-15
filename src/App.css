@@ -149,6 +149,9 @@ span{
   font-family: 'Roboto', sans-serif;
   color: var(--color5);
 }
+p.infoBulle{
+  color: var(--color6) !important;
+}
 
 /** TEXT ALIGN **/
 
@@ -174,7 +177,9 @@ span{
   max-width: 90%;
   height: auto;
 }
-
+.citronTri{
+  margin-top: 50%;
+}
 
 #logoAccueil{
   justify-self: center;
@@ -264,4 +269,27 @@ input.champRemplir{
 button.boutonRetour{
   background-color:#61dafb ;
   
+}
+
+/* info Bulle */
+.infoBulle{
+  background: var(--color1);
+  border-radius: 30px;
+  top: 15%;
+  left: 6%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 60%;
+  color: var(--color6);
+}
+.infoBulle::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(-45deg);
+  bottom: -15px;
+  content: "";
+  left: 90%;
+  position: absolute;
+  z-index: 99;
 }
