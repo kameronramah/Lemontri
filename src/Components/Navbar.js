@@ -11,7 +11,7 @@ export default function Navbar() {
         <CustomLink to="/cours"><FaGraduationCap /></CustomLink>
         <CustomLink to="/accueil"><FaHome /></CustomLink>
         <CustomLink to="/quizzes"><ImTrophy /></CustomLink>
-        <CustomLink to="/info"><FaInfoCircle /></CustomLink>
+        <CustomLink to="/chatbot"><FaInfoCircle /></CustomLink>
       </ul>
     </nav>
   )
