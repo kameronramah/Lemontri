@@ -75,7 +75,6 @@ const Accueil = () => {
             <p class="text-align-c"> Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.</p>
             <p class="text-align-c">  Découvrez nos solutions et triez sans modération ! </p>
         </div>
-
     }
 
     return (
