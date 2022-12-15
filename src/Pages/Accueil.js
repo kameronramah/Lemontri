@@ -36,7 +36,7 @@ const Accueil = () => {
                 </div>
                 <img id="citronAccueil" src={citronBallon}></img>
             </div>
-            <div class="flex-col space-bet">
+            <div id="sec-Accueil" class="flex-col space-bet">
                 <div class="flex-col center">
                     <p class="text-align-c">
                         Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.

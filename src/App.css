@@ -157,6 +157,10 @@ p{
   width: 60%;
 }
 
+#sec-Accueil{
+  margin-top : 20%;
+}
+
 /** DISPLAY FLEX **/
 
 .flex-row{
