@@ -237,12 +237,12 @@ button.btn-primary:hover{
   background-color: var(--color2);
   color: var(--color6);
 }
-input.btn-primary :hover{
-  background-color: var(--color3);
+input.btn-primary:hover{
+  background-color: var(--color2);
   color: var(--color6);
 }
-button.btn-warning :hover{
-  background-color: var(--color1);
+button.btn-warning:hover{
+  background-color: var(--color3);
   color: var(--color6);
 }
 
