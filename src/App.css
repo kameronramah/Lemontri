@@ -233,6 +233,19 @@ button.btn-warning{
   background-color: var(--color3);
   font-size: 20px;
 }
+button.btn-primary:hover{
+  background-color: var(--color2);
+  color: var(--color6);
+}
+input.btn-primary :hover{
+  background-color: var(--color3);
+  color: var(--color6);
+}
+button.btn-warning :hover{
+  background-color: var(--color1);
+  color: var(--color6);
+}
+
 
 /* INPUT */
 input.champRemplir{
