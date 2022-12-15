@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {auth} from "../firebase/firebase";
-import lemontri from './lemontri.png';
+import lemontri from '../img/lemontri.png';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import Devis from "./Devis";
 import drapeau1 from "../img/drapeau-1.webp";
