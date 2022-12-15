@@ -1,5 +1,8 @@
+import {FaChevronLeft} from "react-icons/fa";
+import {useNavigate} from "react-router-dom";
 import React from 'react'
 const Devis = () => {
+  const navigate = useNavigate();
   const [formStatus, setFormStatus] = React.useState('Contacter')
   const onSubmit = (e) => {
     e.preventDefault()
@@ -16,6 +19,10 @@ const Devis = () => {
   }
   return (
     <div >
+      <div class="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/company-code")}>
+          <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+          <p class="retour hoverCursor">Retour</p>
+      </div> 
       <h2 >DEMANDER UN DEVIS</h2>
       <form onSubmit={onSubmit}>
         <div>
