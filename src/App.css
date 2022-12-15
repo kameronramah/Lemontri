@@ -177,7 +177,7 @@ span{
 
 
 #logoAccueil{
-  align-self: center;
+  justify-self: center;
 }
 
 /** MARGINS **/
