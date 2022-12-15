@@ -9,7 +9,6 @@ const Home = () => {
         if(auth.currentUser !== null) {
             //Redirection vers la page d'accueil
         }
-
     })
 
     return (

@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {auth} from "../firebase/firebase";
-import lemontri from './lemontri.png';
+import lemontri from '../img/ballons.webp';
+import citronBallon from '../img/logo.svg'
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import Devis from "./Devis";
 
@@ -24,17 +25,21 @@ const Accueil = () => {
 
     if(isConnected === false) {
         home = 
-        <div>
-            <h1>Bienvenue</h1>
-            <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
-            <img src ={lemontri} alt="Lemontri" />
+        <div class="margins">
+            <div class="titleAccueil">
+                <h1>Bienvenue</h1>
+                <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
+            </div>
+            <img id="citronAccueil" src="{citronBallon}"></img>
+           
+            <img class="logoLemonTri" src ={lemontri} alt="Lemontri" />
             <p>
                 Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.
                 Découvrez nos solutions et triez sans modération !
             </p>
             <div>
-                <button onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
-                <button onclick={() => navigate('')}>ALLER SUR LE SITE</button>
+                <button class="btn" onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
+                <button class="btn" onclick={() => navigate('')}>ALLER SUR LE SITE</button>
                 
             </div>
             <h2>Vous avez dèja un compte ?</h2>
