@@ -42,15 +42,15 @@ const Accueil = () => {
                         Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.
                         Découvrez nos solutions et triez sans modération !
                     </p>
-                    <div class="flex-col space-bet">
+                    <div class="flex-col space-bet mt-4">
                         <button class="btn btn-primary" onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
-                        <button class="btn btn-warning" onclick={() => navigate('https://lemontri.fr')}>ALLER SUR LE SITE</button> 
+                        <button class="btn btn-warning mt-3" onclick={() => navigate('https://lemontri.fr')}>ALLER SUR LE SITE</button> 
                     </div>
                 </div>
                 
-                <div class="flex-col center">
+                <div class="flex-col center mt-5">
                     <h2>Vous avez déjà un compte ?</h2>
-                    <button class="btn btn-warning" onclick={() => navigate('/sign-in')}>CONNECTER</button>
+                    <button class="btn btn-warning" onclick={() => navigate('/sign-in')}>SE CONNECTER</button>
                 </div>
             </div>
         </div>
