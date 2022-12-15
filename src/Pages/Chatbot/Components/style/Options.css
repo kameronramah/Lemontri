@@ -1,6 +1,8 @@
 .options-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
 }
 
 .option-button {
@@ -12,6 +14,7 @@
     text-align: center;
     font-size: 0.9rem;
     cursor: pointer;
+    width: 50%;
 }
 
 .option-button:hover {
