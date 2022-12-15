@@ -249,8 +249,20 @@ input.champRemplir{
 
 /* Retour  */
 .backButton{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 20px;
   background: var(--color3);
+}
+
+.retour{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color : var(--color5);
+  padding-left: 10px;
+}
+
+.hoverCursor:hover{
+  cursor:pointer;
 }
