@@ -6,11 +6,6 @@
     margin: 0;
   }
   
-  .container {
-    margin: 1rem;
-    text-align: center;
-  }
-  
   .nav {
     color: #4B4B4B;
     display: flex;
@@ -43,8 +38,4 @@
   
   .nav li.active {
     background-color: #555;
-  }
-  
-  .nav li:hover {
-    background-color: #777;
   }

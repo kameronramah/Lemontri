@@ -1,0 +1,32 @@
+.header-lesson {
+    top: 0;
+    height: 90px;
+}
+
+.container-lessons {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.icon-lesson {
+    width: 75px;
+}
+
+.col-icon-lesson {
+    margin-bottom: 1rem;
+}
+
+.authorize-lesson {
+    margin: 150px auto 0;
+}
+
+.unauthorize-lesson {
+    padding: 50px;
+}
+
+.img-lesson {
+    width: 85px;
+    transform: translateX(-50%);
+    margin-top: -1rem;
+}
+
