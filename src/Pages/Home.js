@@ -4,77 +4,31 @@ import {auth} from "../firebase/firebase";
 import lemontri from './lemontri.png';
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import Devis from "./Devis";
-
+import drapeau1 from "../img/drapeau-1.webp";
 
 const Home = () => {
-    const [isConnected, setIsConnected] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
         if(auth.currentUser !== null) {
-            setIsConnected(true);
-            //Redirection vers la page d'accueil
-        }
-        else {
-            setIsConnected(false);
         }
     })
 
-    let home;
-
-    if(isConnected) {
-        home = 
-        <Router>
-            <div>
-                <h1>Bienvenue</h1>
-                <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
-                <img src ={lemontri} Alt="Lemontri" />
-                <p>
-                    Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.
-                    Découvrez nos solutions et triez sans modération !
-                </p>
-                <div>
-                    <Link to="/Devis">
-                    <button onclick="activateLasers()"  >
-                    CONTACTER LEMONTRI
-                    </button>
-                    </Link>
-                    <Link to="https://lemontri.fr/">
-                    <button onclick="activateLasers()"  >
-                    ALLER SUR LE SITE 
-                    </button>
-                    </Link>
-                </div>
-                <h2>Vous avez dèja un compte ?</h2>
-                <Link to="https://lemontri.fr/">
-                    <button onclick="activateLasers()"  >
-                        SE CONNECTER  
-                    </button>
-                </Link>
-            </div>
-        </Router>
-    }
-    else {
-
-        <Router>
-            <div>
-               <h1>Bienvenue Capucine</h1>
-                <p>Apprends à mieux trier avec  les bons “zestes” du tri</p>
-                <h2>Ton établissement</h2>
-                
-
-            </div>
-        </Router>
-
-    }
 
     return (
         <div>
-            {home}
-            <button onClick={e => navigate('/sign-in')}>Se connecter</button>
-            <button onClick={e => navigate('/accueil')}>Accéder sans compte</button>
+            <div className='container'>
+                <h1 className='display-2 text-center'>Les bons zestes <br/>de tri</h1>
+                <img className="img-fluid img-thumbnai" src={drapeau1}  alt="test"></img>
+                <div className='d-grid gap-4 col-6 mx-auto'>
+                    <button className='btn btn-primary' onClick={e => navigate('/sign-in')}>Se connecter</button>
+                    <button className='btn btn-warning ' onClick={e => navigate('/accueil')}>Accéder sans compte</button>
+                </div>
+            </div>
         </div>
-    )
-};
+    );
+
+}
+
 
 export default Home;

@@ -1,0 +1,24 @@
+.options-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.option-button {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 0px;
+    background-color: #FFCC07;
+    text-align: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 50%;
+}
+
+.option-button:hover {
+    border: 2px solid black;
+}
+
+
