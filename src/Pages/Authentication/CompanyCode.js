@@ -45,7 +45,6 @@ const CompanyCode = () => {
                 <input type="submit" value="Continuer" />
             </form>
             <button onClick={e => navigate("/devis")}>Devenir partenaire Lemontri</button>
-            <span onClick={e => navigate("/")}>Revenir à l'accueil</span>
         </div>
     )
 };
