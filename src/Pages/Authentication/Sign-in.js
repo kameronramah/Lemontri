@@ -37,7 +37,7 @@ const SignIn = () => {
     return (
         <div>
             <Container className="w-100 mx-auto">
-                <button className="boutonRetour btn circle text-start"></button>
+                <button className="boutonRetour btn circle text-left"></button>
                 <img className="img-fluid img-thumbnai w-80 mt-5" src={groupeEco}  alt="test"></img>
                 <div className="d-grid gap-4 col-10 mx-auto mt-5">
                     <form onSubmit={e => login(e, email, password)}>

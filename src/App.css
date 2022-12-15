@@ -169,5 +169,12 @@ input.champRemplir{
 /* Retour  */
 button.boutonRetour{
   background-color:#61dafb ;
+  display:inline-block;
+  margin:2px;
+  font-size:24px;
+  cursor:pointer;
+  width:30px;
+  height:30px;
+  border-radius:50%;
   
 }
