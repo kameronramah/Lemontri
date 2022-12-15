@@ -1,0 +1,20 @@
+.options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-button {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 0px;
+    background-color: #FFCC07;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.option-button:hover {
+    border: 2px solid black;
+}
+
+
