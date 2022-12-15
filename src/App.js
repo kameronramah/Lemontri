@@ -13,7 +13,10 @@ import Navbar from './Pages/Navbar';
 import Lesaviezvous from './Pages/Lesaviezvous';
 import Cours from './Pages/Cours';
 import Profil from './Pages/Profil';
+import Quizzes from './Pages/Game/Quizzes';
 import Accueil from './Pages/Accueil';
+import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
+
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
 
@@ -36,10 +39,12 @@ const App = () => {
             <Route path="/company-code" element={<CompanyCode/>} />
             <Route path="/email-verification" element={<EmailVerification/>} />
             <Route path="/devis"  element={<Devis/>} />
+            <Route path="/quizzes" element={<Quizzes/>} />
             {/* <Route path="/lesaviezvous" element={<Lesaviezvous/>} /> */}
             {/* <Route path="/cours" element={<Cours/>} /> */}
             {/* <Route path="/profil" element={ <Profil/>} />  */}
             <Route path="/accueil" element={<Accueil/>} />
+            <Route path="/chatbot" element={<LemontriChatBot/>}/>
           </Routes>
       </Router>
   );
