@@ -1,6 +1,9 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {auth} from "../firebase/firebase";
+import lemontri from '../img/lemontri.png';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import Devis from "./Devis";
 import drapeau1 from "../img/drapeau-1.webp";
 
 const Home = () => {
@@ -8,9 +11,9 @@ const Home = () => {
 
     useEffect(() => {
         if(auth.currentUser !== null) {
-            //Redirection vers la page d'accueil
         }
     })
+
 
     return (
         <div>
@@ -21,10 +24,11 @@ const Home = () => {
                     <button className='btn btn-primary' onClick={e => navigate('/sign-in')}>Se connecter</button>
                     <button className='btn btn-warning ' onClick={e => navigate('/accueil')}>Accéder sans compte</button>
                 </div>
-
             </div>
         </div>
-    )
-};
+    );
+
+}
+
 
 export default Home;

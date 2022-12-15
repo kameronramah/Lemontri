@@ -25,36 +25,54 @@ const Accueil = () => {
 
     if(isConnected === false) {
         home = 
-        <div class="margins">
-            <div class="titleAccueil">
-                <h1>Bienvenue</h1>
-                <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
+        <div class="margins flex-col">
+            <div class="flex-row">
+                <div class="flex-col titleAccueil">
+                    <h1>Bienvenue</h1>
+                    <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
+                    <div id='logoAccueil'>
+                        <img class="logoLemonTri" src ={lemontri} alt="Lemontri" />
+                    </div>
+                </div>
+                <img id="citronAccueil" src={citronBallon}></img>
             </div>
-            <img id="citronAccueil" src={citronBallon}></img>
-           
-            <img class="logoLemonTri" src ={lemontri} alt="Lemontri" />
-            <p>
-                Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.
-                Découvrez nos solutions et triez sans modération !
-            </p>
-            <div>
-                <button class="btn" onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
-                <button class="btn" onclick={() => navigate('')}>ALLER SUR LE SITE</button>
+            <div class="flex-col space-bet">
+                <div class="flex-col center">
+                    <p class="text-align-c">
+                        Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.
+                        Découvrez nos solutions et triez sans modération !
+                    </p>
+                    <div class="flex-col space-bet">
+                        <button class="btn btn-primary" onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
+                        <button class="btn btn-warning" onclick={() => navigate('https://lemontri.fr')}>ALLER SUR LE SITE</button> 
+                    </div>
+                </div>
                 
+                <div class="flex-col center">
+                    <h2>Vous avez déjà un compte ?</h2>
+                    <button class="btn btn-warning" onclick={() => navigate('/sign-in')}>CONNECTER</button>
+                </div>
             </div>
-            <h2>Vous avez dèja un compte ?</h2>
-            <button onclick={() => navigate('/sign-in')}>CONNECTER</button>
         </div>
     }
     else {
        home =
-        <div>
-            <h1>Bienvenue Capucine</h1>
-            <p>Apprends à mieux trier avec les bons “zestes” du tri</p>
-            <h2>Ton établissement</h2>
-            <img src ={lemontri} alt="Lemontri" />
-            <p> Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.</p>
-            <p>  Découvrez nos solutions et triez sans modération ! </p>
+        <div class="margins flex-col">
+           <div class="flex-row">
+                <div class="flex-col titleAccueil">
+                    <div>
+                        <h1 class="m-b-0">Bienvenue<br/>Username</h1>
+                    </div>
+                    <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
+                </div>
+                <img id="citronAccueil" src={citronBallon}></img>
+            </div>
+            <h2>Ton établissement<br/>UserCompany</h2>
+            <div id='logoAccueil'>
+                        <img class="logoLemonTri" src ={lemontri} alt="Lemontri" />
+                    </div>
+            <p class="text-align-c"> Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.</p>
+            <p class="text-align-c">  Découvrez nos solutions et triez sans modération ! </p>
         </div>
 
     }
