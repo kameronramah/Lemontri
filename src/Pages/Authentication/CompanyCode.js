@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import {Link, useNavigate} from "react-router-dom";
 import {auth, db} from "../../firebase/firebase";
+import {FaChevronLeft} from "react-icons/fa";
 
 
 const CompanyCode = () => {
@@ -32,6 +33,10 @@ const CompanyCode = () => {
 
     return (
         <div>
+            <div class="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/sign-in")}>
+                <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+                <p class="retour hoverCursor">Retour</p>
+            </div> 
             <form onSubmit={e => checkCompanyCode(e, companyCode)}>
                 <label>
                     Code entreprise:
