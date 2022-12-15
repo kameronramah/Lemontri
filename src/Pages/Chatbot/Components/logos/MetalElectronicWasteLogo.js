@@ -1,5 +1,5 @@
 import React from "react";
-import Dechet from '../../../../img/dee.webp';
+import Dechet from '../../../../img/DEE.webp';
 import '../style/LogoTri.css';
 
 const MetalElectronicWasteLogo = () => {

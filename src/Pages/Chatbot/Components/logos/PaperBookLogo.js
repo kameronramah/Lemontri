@@ -1,5 +1,5 @@
 import React from "react";
-import Livre from '../../../../img/Livre.webp';
+import Livre from '../../../../img/livre.webp';
 import '../style/LogoTri.css';
 
 const PaperBookLogo = () => {
