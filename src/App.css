@@ -167,14 +167,18 @@ input.champRemplir{
 }
 
 /* Retour  */
-button.boutonRetour{
-  background-color:#61dafb ;
+input.boutonRetour{
+  background-color: var(--color3) ;
   display:inline-block;
   margin:2px;
   font-size:24px;
   cursor:pointer;
-  width:30px;
-  height:30px;
   border-radius:50%;
-  
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 11px;
+}
+.fa-solid{
+  background-color: #069B3E;
 }
