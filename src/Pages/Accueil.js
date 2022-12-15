@@ -25,9 +25,9 @@ const Accueil = () => {
 
     if(isConnected === false) {
         home = 
-        <div class="margins flex-col">
-            <div class="flex-row">
-                <div class="flex-col titleAccueil">
+        <div class="margins">
+            <div class="d-flex flex-row justify-content-between">
+                <div class="titleAccueil">
                     <h1>Bienvenue</h1>
                     <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
                     <div id='logoAccueil'>
@@ -36,19 +36,20 @@ const Accueil = () => {
                 </div>
                 <img id="citronAccueil" src={citronBallon}></img>
             </div>
-            <div class="flex-col space-bet">
-                <div class="flex-col center">
+
+            <div class="flex-col space-bet mt-5">
+                <div class="center">
                     <p class="text-align-c">
                         Avec Lemon Tri, il devient possible de trier tout au long de la journée, quel que soit l’endroit où l’on se trouve.
                         Découvrez nos solutions et triez sans modération !
                     </p>
-                    <div class="flex-col space-bet">
+                    <div class="flex-col space-bet mt-3">
                         <button class="btn btn-primary" onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
                         <button class="btn btn-warning" onclick={() => navigate('https://lemontri.fr')}>ALLER SUR LE SITE</button> 
                     </div>
                 </div>
                 
-                <div class="flex-col center">
+                <div class="flex-col center mt-5">
                     <h2>Vous avez déjà un compte ?</h2>
                     <button class="btn btn-warning" onclick={() => navigate('/sign-in')}>CONNECTER</button>
                 </div>
