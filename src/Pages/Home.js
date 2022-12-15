@@ -21,7 +21,7 @@ const Home = () => {
                     <button className='btn btn-primary' onClick={e => navigate('/sign-in')}>Se connecter</button>
                     <button className='btn btn-warning ' onClick={e => navigate('/accueil')}>Accéder sans compte</button>
                 </div>
-              
+
             </div>
         </div>
     )

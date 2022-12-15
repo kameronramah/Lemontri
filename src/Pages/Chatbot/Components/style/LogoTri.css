@@ -1,0 +1,9 @@
+.logos-tri {
+    display: flex;
+}
+
+.logo-tri {
+    height: 70px;
+    width: 70px;
+    margin: 0 5px;
+}
