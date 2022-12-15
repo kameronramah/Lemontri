@@ -4,28 +4,28 @@ import {ImTrophy } from "react-icons/im"
 
 
 export default function Navbar() {
-    return (
-        <nav className="nav">
-            <ul>
-                <CustomLink to="/#"><FaRegLightbulb /></CustomLink>
-                <CustomLink to="/#"><FaGraduationCap /></CustomLink>
-                <CustomLink to="/#"><FaHome /></CustomLink>
-                <CustomLink to="/#"><ImTrophy /></CustomLink>
-                <CustomLink to="/#"><FaInfoCircle /></CustomLink>
-            </ul>
-        </nav>
-    )
+  return (
+    <nav className="nav">
+      <ul>
+        <CustomLink to="/lesaviezvous"><FaRegLightbulb /></CustomLink>
+        <CustomLink to="/cours"><FaGraduationCap /></CustomLink>
+        <CustomLink to="/accueil"><FaHome /></CustomLink>
+        <CustomLink to="/quizzes"><ImTrophy /></CustomLink>
+        <CustomLink to="/info"><FaInfoCircle /></CustomLink>
+      </ul>
+    </nav>
+  )
 }
 
 function CustomLink({ to, children, ...props }) {
-    const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  const resolvedPath = useResolvedPath(to)
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
-    return (
-        <li className={isActive ? "active" : ""}>
-            <Link to={to} {...props}>
-                {children}
-            </Link>
-        </li>
-    )
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  )
 }
