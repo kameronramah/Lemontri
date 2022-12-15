@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {auth} from "../firebase/firebase";
-import lemontri from '../img/ballons.webp';
-import citronBallon from '../img/logo.svg'
+import lemontri from '../img/lemontri.png';
+import citronBallon from '../img/ballons.webp'
 import {BrowserRouter as Router, Link} from 'react-router-dom';
 import Devis from "./Devis";
 
@@ -30,7 +30,7 @@ const Accueil = () => {
                 <h1>Bienvenue</h1>
                 <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
             </div>
-            <img id="citronAccueil" src="{citronBallon}"></img>
+            <img id="citronAccueil" src={citronBallon}></img>
            
             <img class="logoLemonTri" src ={lemontri} alt="Lemontri" />
             <p>
