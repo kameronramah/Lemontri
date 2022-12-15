@@ -248,23 +248,9 @@ input.champRemplir{
 }
 
 /* Retour  */
-input.boutonRetour{
-  background-color: var(--color3) ;
-  display:inline-block;
-  margin:2px;
-  font-size:24px;
-  cursor:pointer;
-  border-radius:50%;
-  width: 30px;
-  height: 30px;
-  left: 10px;
-  top: 11px;
-}
-
-.fa-solid{
-  background-color: #069B3E;
-}
-
-button.boutonRetour{
-  background-color:#61dafb ;
+.backButton{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--color3);
 }
