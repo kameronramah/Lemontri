@@ -7,11 +7,11 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <ul>
-        <CustomLink to="/#"><FaRegLightbulb /></CustomLink>
-        <CustomLink to="/#"><FaGraduationCap /></CustomLink>
-        <CustomLink to="/#"><FaHome /></CustomLink>
-        <CustomLink to="/#"><ImTrophy /></CustomLink>
-        <CustomLink to="/#"><FaInfoCircle /></CustomLink>
+        <CustomLink to="/lesaviezvous"><FaRegLightbulb /></CustomLink>
+        <CustomLink to="/cours"><FaGraduationCap /></CustomLink>
+        <CustomLink to="/"><FaHome /></CustomLink>
+        <CustomLink to="/quizzes"><ImTrophy /></CustomLink>
+        <CustomLink to="/info"><FaInfoCircle /></CustomLink>
       </ul>
     </nav>
   )
