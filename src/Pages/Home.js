@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className='container'>
+            <div className='container mx-auto'>
                 <h1 className='titre1 display-2 text-center mt-5'>Les bons zestes <br/>de tri</h1>
                 <img className="drapeau img-fluid img-thumbnai w-100 mt-4" src={drapeau1}  alt="test"></img>
                 <div className='d-grid gap-4 col-10 mx-auto mt-5'>

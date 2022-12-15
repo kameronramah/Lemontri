@@ -112,12 +112,22 @@ h2{
 
 p{
   font-family: 'Roboto', sans-serif;
+  color: var(--color5);
+}
+span{
+  font-family: 'Roboto', sans-serif;
+  color: var(--color5);
 }
 
 /** IMAGES **/
 .logoLemonTri{
   max-width: 200px;
 }
+.img-fluid {
+  max-width: 90%;
+  height: auto;
+}
+
 
 .margins{
   margin: 20px;
@@ -126,4 +136,38 @@ p{
 /** PAGE ACCUEIL **/
 .titleAccueil{
   max-width: 60%;
+}
+
+
+ /* LES BOUTONS */
+ button.btn{
+  color: var(--color6);
+}
+button.btn-primary,
+input.btn-primary{
+  background-color: var(--color1);
+  font-size: 20px;
+}
+button.btn-warning{
+  background-color: var(--color3);
+  font-size: 20px;
+}
+
+/* INPUT */
+input.champRemplir{
+  width: 240px;
+  height: 30px;
+  left: 60px;
+  top: 306px;
+
+  background: #D9D9D9;
+  box-shadow: 0px 2px 1px #408C32;
+  border-radius: 5px;
+  color: var(--color5);
+}
+
+/* Retour  */
+button.boutonRetour{
+  background-color:#61dafb ;
+  
 }

@@ -14,6 +14,7 @@ import Profil from './Pages/Profil';
 import Accueil from './Pages/Accueil';
 import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
 import NavbarLayout from "./Components/NavbarLayout";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
