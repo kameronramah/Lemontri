@@ -85,43 +85,90 @@ body,
 /** NAVBAR **/
 
 .nav{
-  position: fixed;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   height: 60px;
-  bottom: 0vh;
   background: #FFCC07;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .nav ul{
   display: flex;
   width: 100%;
   justify-content: space-around;
+  max-width: 900px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 1rem;
 }
 
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li:hover {
+  background-color: #e2a600;
+}
 /** TITLES & FONTS **/
 h1{
   font-family: 'Bebas Neue', sans-serif;
   color: green;
   font-weight: bold;
+  font-size: 40px;
 }
 
 h2{
   font-family: 'Bebas Neue', sans-serif;
+  color: green;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 p{
   font-family: 'Roboto', sans-serif;
   color: var(--color5);
 }
+
 span{
   font-family: 'Roboto', sans-serif;
   color: var(--color5);
 }
 
+/** TEXT ALIGN **/
+
+.text-align-c{
+  text-align: center;
+}
+
+
 /** IMAGES **/
 .logoLemonTri{
   max-width: 200px;
+  margin: 30px;
+}
+
+#citronAccueil{
+  max-width: 40%;
+  height: auto;
+  position: absolute;
+  right: 0px;
+  transform: rotate(-5deg) ;
 }
 .img-fluid {
   max-width: 90%;
@@ -129,8 +176,22 @@ span{
 }
 
 
+#logoAccueil{
+  align-self: center;
+}
+
+/** MARGINS **/
+
 .margins{
   margin: 20px;
+}
+
+.margin-t-100{
+  margin-top: 100px;
+}
+
+.m-b-0{
+  margin-bottom: 0;
 }
 
 /** PAGE ACCUEIL **/
@@ -138,9 +199,29 @@ span{
   max-width: 60%;
 }
 
+/** DISPLAY FLEX **/
 
- /* LES BOUTONS */
- button.btn{
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.space-bet{
+  justify-content: space-between;
+}
+
+.center{
+  justify-content: center;
+  align-items: center;
+}
+
+/* LES BOUTONS */
+button.btn{
   color: var(--color6);
 }
 button.btn-primary,
@@ -179,6 +260,12 @@ input.boutonRetour{
   left: 10px;
   top: 11px;
 }
+
 .fa-solid{
   background-color: #069B3E;
+}
+
+button.boutonRetour{
+  background-color:#61dafb ;
+  
 }
