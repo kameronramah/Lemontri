@@ -26,32 +26,7 @@ const App = () => {
   return (
       <Router>
           <Navbar />
-          {/* <nav>
-            <ul>
-              <li>
-                <Link to="/">Accueil</Link>
-              </li>
-              <li>
-                <Link to="/sign-in">Connexion</Link>
-              </li>
-              <li>
-                <Link to="/sign-up">Inscription</Link>
-              </li>
-              <li>
-              <Link to="/devis">Devis</Link>
-              </li>
-              <li>
-                <Link to="lesaviezvous">LE SAVIEZ VOUS</Link>
-              </li>
-              <li>
-                <Link to="cours">Cours </Link>
-              </li>
-              <li>
-                <Link to="profil">Profil </Link>
-              </li>
-              {deconnexion}
-            </ul>
-          </nav> */}
+          {}
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/sign-in" element={<SignIn/>} />
@@ -62,7 +37,6 @@ const App = () => {
             {/* <Route path="/profil" element={ <Profil/>} />  */}
             <Route path="/accueil" element={<Accueil/>} />
           </Routes>
-
       </Router>
   );
 }
