@@ -26,7 +26,7 @@ const SignIn = () => {
                     console.log('Email non vérifié');
                 }
                 else {
-                    navigate('/');
+                    navigate('/accueil');
                 }
             })
             .catch((error) => {
