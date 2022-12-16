@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {auth, db} from "../firebase/firebase";
 import lemontri from '../img/lemontri.png';
 import citronBallon from '../img/ballons.webp'
@@ -39,7 +39,6 @@ const Accueil = () => {
                 setUser(doc.data());
             })
         }
-        return true;
     }
 
     return (
@@ -85,7 +84,9 @@ const Accueil = () => {
                             </div>
                             <p>Apprends à mieux trier avec les bons "zestes" du tri</p>
                         </div>
-                        <img id="citronAccueil" src={citronBallon}></img>
+                        <Link to={'/profil'}>
+                            <div className={'profil-circle'}></div>
+                        </Link>
                     </div>
                     <h2>Ton établissement : <br/>{company.name}</h2>
                     <div id='logoAccueil'>

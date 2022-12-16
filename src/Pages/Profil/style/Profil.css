@@ -1,0 +1,25 @@
+.title-yellow {
+    color: #FFCC07;
+}
+
+.rank {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.color-green {
+    color: green;
+}
+
+.progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.actualProgress {
+    background-color: #FFCC07;
+    height: 100%;
+    border-radius: 5px;
+}

@@ -46,16 +46,35 @@ const CoursUnitaire = () => {
         return lesson;
     }
 
+    const getRanks = async () => {
+        let ranks = [];
+        const q = query(collection(db, "ranks"));
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            ranks.push(doc.data());
+        });
+        return ranks;
+    }
+
     const isRead = async () => {
         let q = query(collection(db,'users'), where('email', '==', auth.currentUser.email));
         const querySnapshot = await getDocs(q);
         if(!querySnapshot.empty) {
             querySnapshot.forEach((doc) => {
-                let xp = doc.data().xp === undefined ? 0 : doc.data().xp;
-                updateDoc(doc.ref, {
-                    cours: arrayUnion(lesson.routeTitle),
-                    xp: xp+=50
-                })
+                getRanks().then((ranks) => {
+                    let rankUser = doc.data().rank;
+                    ranks.every((rank) => {
+                        if(doc.data().xp + 50 >= rank.xpMini) {
+                            rankUser = rank.id;
+                            return false;
+                        }
+                    })
+                    updateDoc(doc.ref, {
+                        cours: arrayUnion(lesson.routeTitle),
+                        xp: doc.data().xp + 50,
+                        rank: rankUser
+                    })
+                });
             })
         }
     }

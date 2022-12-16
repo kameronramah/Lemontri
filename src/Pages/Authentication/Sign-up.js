@@ -32,7 +32,8 @@ const SignUp = () => {
                 name: name,
                 lastname: lastname,
                 email: email,
-                companyCode: companyCode
+                companyCode: companyCode,
+                rank: 1
             });
             await sendEmailVerification(userRecord.user);
             await auth.signOut();
