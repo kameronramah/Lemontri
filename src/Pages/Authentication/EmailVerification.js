@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 import {FaChevronLeft} from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import citronTache from "../../img/avocat-checklist.webp";
 
