@@ -180,6 +180,12 @@ p.infoBulle{
 .citronTri{
   margin-top: 50%;
 }
+.citronJoie{
+  max-width: 60% !important;
+  margin-left: 50%;
+  margin-top: 20%;
+  z-index: 1;
+}
 
 #logoAccueil{
   justify-self: center;
@@ -293,3 +299,24 @@ button.boutonRetour{
   position: absolute;
   z-index: 99;
 }
+
+.infoBulle1{
+  background: var(--color1);
+  border-radius: 30px;
+  top: 10%;
+  left: 2%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 54%;  
+  color: var(--color6);
+}
+.infoBulle1::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(-100deg);
+  bottom: 50px;
+  content: "";
+  left: 95%;
+  position: absolute;
+} 
