@@ -9,9 +9,9 @@ export default function Navbar() {
       <ul>
         <CustomLink to="/lesaviezvous"><FaRegLightbulb /></CustomLink>
         <CustomLink to="/cours"><FaGraduationCap /></CustomLink>
-        <CustomLink to="/"><FaHome /></CustomLink>
+        <CustomLink to="/accueil"><FaHome /></CustomLink>
         <CustomLink to="/quizzhome"><ImTrophy /></CustomLink>
-        <CustomLink to="/info"><FaInfoCircle /></CustomLink>
+        <CustomLink to="/chatbot"><FaInfoCircle /></CustomLink>
       </ul>
     </nav>
   )

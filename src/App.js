@@ -8,14 +8,15 @@ import SignUp from "./Pages/Authentication/Sign-up";
 import CompanyCode from "./Pages/Authentication/CompanyCode";
 import EmailVerification from "./Pages/Authentication/EmailVerification";
 import Devis from './Pages/Devis';
-import Navbar from './Pages/Navbar';
 import Lesaviezvous from './Pages/Lesaviezvous';
-import Cours from './Pages/Cours';
+import Cours from './Pages/Cours/Cours';
 import Profil from './Pages/Profil';
 import Quizzes from './Pages/Game/Quizzes';
 import QuizzHome from './Pages/Game/QuizzHome';
 import Accueil from './Pages/Accueil';
 import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
+import NavbarLayout from "./Components/NavbarLayout";
+import CoursUnitaire from "./Pages/Cours/CoursUnitaire";
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
@@ -31,8 +32,6 @@ const App = () => {
 
   return (
       <Router>
-          <Navbar />
-          {}
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/sign-in" element={<SignIn/>} />
@@ -43,12 +42,14 @@ const App = () => {
             <Route path="/quizzes" element={<Quizzes/>} />
 
             {/* <Route path="/lesaviezvous" element={<Lesaviezvous/>} /> */}
-            {/* <Route path="/cours" element={<Cours/>} /> */}
             {/* <Route path="/profil" element={ <Profil/>} />  */}
-            <Route path="/accueil" element={<Accueil/>} />
-            <Route path="/chatbot" element={<LemontriChatBot/>}/>
-            <Route path="/quizzhome" element={<QuizzHome/>}/>
-
+            <Route element={<NavbarLayout/>}>
+              <Route path="/accueil" element={<Accueil/>} />
+              <Route path="/chatbot" element={<LemontriChatBot/>}/>
+              <Route path="/cours" element={<Cours/>}/>
+              <Route path="/cours/:id" element={<CoursUnitaire/>}/>
+              <Route path="/quizzhome" element={<QuizzHome/>}/>
+            </Route>
           </Routes>
       </Router>
   );

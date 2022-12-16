@@ -26,8 +26,8 @@
 }
 
 .react-chatbot-kit-chat-message-container {
-    overflow: unset;
     overflow-y: scroll;
+    height: calc(100vh - 86px);
 }
 
 .react-chatbot-kit-chat-bot-avatar-container {
