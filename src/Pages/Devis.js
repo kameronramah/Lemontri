@@ -1,7 +1,10 @@
 import {FaChevronLeft} from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
 import {Container} from 'react-bootstrap';
-import React from 'react'
+import React from 'react';
+import citronBureau from "../img/contact1.webp";
+
+
 const Devis = () => {
   const navigate = useNavigate();
   const [formStatus, setFormStatus] = React.useState('Contacter')
@@ -27,6 +30,10 @@ const Devis = () => {
         <h1>Devenir client LemonTri</h1>
         <form onSubmit={onSubmit}>
           <div className="text-start mx-5">
+            <label className="form-label" htmlFor="name">Entreprise :</label>
+            <input className="champRemplir form-control" type="text"  required />
+          </div>
+          <div className="text-start mx-5">
             <label className="form-label" htmlFor="name">Nom:</label>
             <input className="champRemplir form-control" type="text" required />
           </div>
@@ -35,7 +42,7 @@ const Devis = () => {
             <input className="champRemplir form-control" type="text"  required />
           </div>
           <div className="text-start mx-5">
-            <label className="form-label" htmlFor="name">Poste:</label>
+            <label className="form-label" htmlFor="name">Poste occupé dans l'entreprise:</label>
             <input className="champRemplir form-control" type="text"  required />
           </div>
           <div className="text-start mx-5">
@@ -45,9 +52,14 @@ const Devis = () => {
           <div className="d-grid gap-4 col-6 mx-auto mt-5">
             <button class="btn btn-primary" type="submit">{formStatus}</button>
           </div>
-          
-        </form>
-    </div>
+        </form></div>
+      <div className="d-flex">
+          <img className="citronBureau img-fluid img-thumbnai" src={citronBureau}  alt="test"></img>
+          <div className="infoBulle2 text-center">
+            Laissez vos coordonnées pour que l’équipe de LemonTri vous contacte. 
+            <br/>Nous sommes pressés de faire votre connaissance !
+          </div>    
+        </div>
     </Container>
   )
 }
