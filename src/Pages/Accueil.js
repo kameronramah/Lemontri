@@ -63,14 +63,14 @@ const Accueil = () => {
                                 Découvrez nos solutions et triez sans modération !
                             </p>
                             <div className="flex-col space-bet mt-3">
-                                <button className="btn btn-primary" onClick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
+                                <button className="btn btn-primary" onClick={() => {navigate('/devis')}}>CONTACTER LEMONTRI </button>
                                 <button className="btn btn-warning" onClick={() => navigate('https://lemontri.fr')}>ALLER SUR LE SITE</button>
                             </div>
                         </div>
 
                         <div className="flex-col center mt-5">
                             <h2>Vous avez déjà un compte ?</h2>
-                            <button className="btn btn-warning" onClick={() => navigate('/sign-in')}>CONNECTER</button>
+                            <button className="btn btn-warning" onClick={() => navigate('/sign-in')}>SE CONNECTER</button>
                         </div>
                     </div>
                 </div>
