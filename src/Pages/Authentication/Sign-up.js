@@ -15,11 +15,11 @@ const SignUp = () => {
     const companyCode = location.state === null ? null : location.state.companyCode;
 
     useEffect(() => {
-        if(auth.currentUser !== null) {
+        if(auth.currentUser !== null && auth.currentUser.emailVerified !== false) {
             //Redirection vers la page d'accueil
             navigate('/accueil');
         }
-        if(companyCode === null) {
+        else if(companyCode === null) {
             navigate('/company-code');
         }
     })

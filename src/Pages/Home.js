@@ -11,7 +11,8 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(auth.currentUser !== null) {
+        if(auth.currentUser !== null && auth.currentUser.emailVerified === true) {
+            navigate('/accueil');
         }
     })
 

@@ -100,10 +100,10 @@ const CoursUnitaire = () => {
                         </Row>
                     </Container>
                     <h1 style={{color: lesson.color}}>UNE QUESTION ? RENDEZ-VOUS SUR LEMONTRI.FR</h1>
-                    {isConnected !== false && done !== true &&
+                    {isConnected === true && done === false &&
                         <button className={'btn btn-success btn-lesson'} onClick={() => isRead()}>J'AI LU CE COURS</button>
                     }
-                    {done === true &&
+                    {isConnected === true && done === true &&
                         <h1>COURS VALIDE</h1>
                     }
                 </div>

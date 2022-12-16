@@ -16,14 +16,13 @@ const Devis = () => {
       poste: poste.value,
       email: email.value,
     }
-    console.log(conFom)
   }
   return (
     <Container className="w-100 mx-auto">
       <div  className="d-grid gap-4 col-6 mx-auto mt-5">
-        <div class="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/company-code")}>
-            <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
-            <p class="retour hoverCursor">Retour</p>
+        <div className="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/company-code")}>
+            <div className="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+            <p className="retour hoverCursor">Retour</p>
         </div> 
         <h1>Devenir client LemonTri</h1>
         <form onSubmit={onSubmit}>
