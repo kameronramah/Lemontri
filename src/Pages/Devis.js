@@ -28,6 +28,10 @@ const Devis = () => {
         <h1>Devenir client LemonTri</h1>
         <form onSubmit={onSubmit}>
           <div className="text-start mx-5">
+            <label className="form-label" htmlFor="name">Entreprise :</label>
+            <input className="champRemplir form-control" type="text"  required />
+          </div>
+          <div className="text-start mx-5">
             <label className="form-label" htmlFor="name">Nom:</label>
             <input className="champRemplir form-control" type="text" required />
           </div>
@@ -36,7 +40,7 @@ const Devis = () => {
             <input className="champRemplir form-control" type="text"  required />
           </div>
           <div className="text-start mx-5">
-            <label className="form-label" htmlFor="name">Poste:</label>
+            <label className="form-label" htmlFor="name">Poste occupé dans l'entreprise:</label>
             <input className="champRemplir form-control" type="text"  required />
           </div>
           <div className="text-start mx-5">
