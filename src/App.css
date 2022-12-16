@@ -35,15 +35,6 @@ p,
 }
 
 /** GENERAL **/
-html,
-body,
-.root,
-.react-chatbot-kit-chat-container,
-.react-chatbot-kit-chat-inner-container,
-.react-chatbot-kit-chat-message-container {
-  height: 100% !important;
-}
-
 .App {
   text-align: center;
 }
@@ -272,9 +263,11 @@ input.champRemplir{
 }
 
 /* Retour  */
-button.boutonRetour{
-  background-color:#61dafb ;
-  
+.backButton{
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--color3);
 }
 
 /* info Bulle */
@@ -320,3 +313,14 @@ button.boutonRetour{
   left: 95%;
   position: absolute;
 } 
+.retour{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color : var(--color5);
+  padding-left: 10px;
+}
+
+.hoverCursor:hover{
+  cursor:pointer;
+}
