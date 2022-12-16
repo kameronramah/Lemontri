@@ -11,35 +11,9 @@ export default function App() {
 				{ answerText: 'Poubelle verte', isCorrect: false },
 			],
 		},
-        {
-			questionText: 'Dans quelle poubelle jette t-on les bouteilles en plastique ?',
-			answerOptions: [
-				{ answerText: 'Poubelle verte', isCorrect: false },
-				{ answerText: 'Poubelle bleu', isCorrect: false },
-				{ answerText: 'Poubelle jaune', isCorrect: true },
-				{ answerText: 'Poubelle verte', isCorrect: false },
-			],
-		},
-        {
-			questionText: 'Dans quelle poubelle jette t-on les bouteilles en plastique ?',
-			answerOptions: [
-				{ answerText: 'Poubelle verte', isCorrect: false },
-				{ answerText: 'Poubelle bleu', isCorrect: false },
-				{ answerText: 'Poubelle jaune', isCorrect: true },
-				{ answerText: 'Poubelle verte', isCorrect: false },
-			],
-		},
-        {
-			questionText: 'Dans quelle poubelle jette t-on les bouteilles en plastique ?',
-			answerOptions: [
-				{ answerText: 'Poubelle verte', isCorrect: false },
-				{ answerText: 'Poubelle bleu', isCorrect: false },
-				{ answerText: 'Poubelle jaune', isCorrect: true },
-				{ answerText: 'Poubelle verte', isCorrect: false },
-			],
-		},
+       
 	];
-
+    
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
