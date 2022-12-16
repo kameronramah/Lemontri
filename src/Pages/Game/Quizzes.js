@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 
 export default function App() {
 	const questions = [
@@ -58,25 +59,27 @@ export default function App() {
 	};
 	return (
 		<div className='app'>
-			{showScore ? (
-				<div className='score-section'>
-					Vous avez bien répondu à {score} questions sur {questions.length}.
-				</div>
-			) : (
-				<>
-					<div className='question-section'>
-						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
+			<Container className='w-100 mx-auto'>
+				{showScore ? (
+					<div className='score-section'>
+						Vous avez bien répondu à {score} questions sur {questions.length}.
+					</div>
+				) : (
+					<>
+						<div className='question-section'>
+							<div className='question-count'>
+								<span>Question {currentQuestion + 1}</span>/{questions.length}
+							</div>
+							<div className='question-text'>{questions[currentQuestion].questionText}</div>
 						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-					</div>
-					<div className='answer-section'>
-						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
-					</div>
-				</>
-			)}
+						<div className='answer-section'>
+							{questions[currentQuestion].answerOptions.map((answerOption) => (
+								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							))}
+						</div>
+					</>
+				)}
+			</Container>
 		</div>
 	);
 }
