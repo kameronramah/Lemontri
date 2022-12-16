@@ -12,6 +12,7 @@ const SignIn = () => {
     useEffect(() => {
         if(auth.currentUser !== null) {
             //Redirection vers la page d'accueil
+            navigate('/accueil');
         }
     })
 

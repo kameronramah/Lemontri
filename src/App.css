@@ -3,15 +3,6 @@
 @import url('https://fonts.cdnfonts.com/css/roboto');
 
 /** GENERAL **/
-html,
-body,
-.root,
-.react-chatbot-kit-chat-container,
-.react-chatbot-kit-chat-inner-container,
-.react-chatbot-kit-chat-message-container {
-  height: 100% !important;
-}
-
 .App {
   text-align: center;
 }

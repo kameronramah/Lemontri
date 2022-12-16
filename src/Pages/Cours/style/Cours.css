@@ -20,13 +20,38 @@
     margin: 150px auto 0;
 }
 
+.authorize-lesson img {
+    width: 50%;
+}
+
 .unauthorize-lesson {
-    padding: 50px;
+    padding: 0 25px 25px 25px;
+    margin: 2rem 0;
+}
+
+.unauthorize-title {
+    font-size: 2rem;
+}
+
+.unauthorize-item {
+    width: fit-content;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
+
+.unauthorize-img {
+    border: 4px solid white;
+    margin-top: -3rem;
+    width: 18%;
 }
 
 .img-lesson {
     width: 85px;
     transform: translateX(-50%);
     margin-top: -1rem;
+}
+
+.btn-lesson {
+    margin-top: 2rem;
 }
 

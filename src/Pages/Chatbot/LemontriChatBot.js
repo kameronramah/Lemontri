@@ -1,8 +1,8 @@
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
-import config from './config';
-import ActionProvider from "./ActionProvider";
-import MessageParser from "./MessageParser";
+import config from './Components/config';
+import ActionProvider from "./Components/ActionProvider";
+import MessageParser from "./Components/MessageParser";
 import './Components/style/ChatBot.css';
 
 const LemontriChatBot = () => {
