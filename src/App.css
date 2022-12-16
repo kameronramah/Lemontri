@@ -182,6 +182,11 @@ p.infoBulle{
   margin-right: 100%;
   margin-top: 54%;
 }
+.citronAvocat{
+  max-width: 60%;
+  margin-top: 15%;
+}
+
 #logoAccueil{
   justify-self: center;
 }
@@ -337,7 +342,26 @@ input.champRemplir{
   right: 93%;
   position: absolute;
 } 
-
+.infoBulle3{
+  background: var(--color1);
+  border-radius: 30px;
+  top: 7%;
+  right: 2%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 50%;  
+  color: var(--color6);
+}
+.infoBulle3::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(58deg);
+  bottom: -10px;
+  content: "";
+  right: 92%;
+  position: absolute;
+} 
 /* Retour */
 .retour{
   font-family: 'Bebas Neue', sans-serif;
