@@ -69,28 +69,34 @@ export default function App() {
 	};
 	return (
 		<div className='app'>
-            <button className='btn btn-warning ' onClick={e => navigate('/QuizzHome')}>RETOUR A LA LISTE</button>
-            <h2>Les différentes poubelles</h2>
-            {/* <p>{tempsRestant}</p> */}
-            {showScore ? (
-                <div className='score-section'>
-                    Vous avez bien répondu à {score} questions sur {questions.length}.
-                </div>
-            ) : (
-                <>
-                    <div className='question-section'>
-                        <div className='question-count'>
-                            <span>Question {currentQuestion + 1}</span>/{questions.length}
-                        </div>
-                        <div className='question-text'>{questions[currentQuestion].questionText}</div>
-                    </div>
-                    <div className='answer-section'>
-                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-                        ))}
-                    </div>
-                </>
-            )}
+			<Container className='w-100 mx-auto'>
+				<div className='boutonRetour'>
+					<button className='btn btn-warning ' onClick={e => navigate('/QuizzHome')}>RETOUR A LA LISTE</button>
+				</div>
+				
+				<h2>Les différentes poubelles</h2>
+				{/* <p>{tempsRestant}</p> */}
+				{showScore ? (
+					<div className='score-section'>
+						Vous avez bien répondu à {score} questions sur {questions.length}.
+					</div>
+				) : (
+					<>
+						<div className='question-section'>
+							<div className='question-count'>
+								<span>Question {currentQuestion + 1}</span>/{questions.length}
+							</div>
+							<div className='question-text'>{questions[currentQuestion].questionText}</div>
+						</div>
+						<div className='answer-section'>
+							{questions[currentQuestion].answerOptions.map((answerOption) => (
+								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+							))}
+						</div>
+					</>
+				)}
+			</Container>
+            
         </div>
 	);
 }

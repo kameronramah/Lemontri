@@ -143,6 +143,50 @@ span{
 p.infoBulle{
   color: var(--color6) !important;
 }
+.nb{
+  position:absolute;
+  top:375px; 
+  width:500px; 
+  height:400px; 
+  left: 65px;
+  z-index:2;
+  font-size:200%
+}
+.nb1{
+  position:absolute;
+  top:59%; 
+  width:500px; 
+  height:400px; 
+  left: 65px;
+  z-index:2;
+  font-size:200%
+}
+.nb2{
+  position:absolute;
+  top:76%; 
+  width:500px; 
+  height:400px; 
+  left: 65px;
+  z-index:2;
+  font-size:200%
+}
+.nb3{
+  position:absolute;
+  top:94%; 
+  width:500px; 
+  height:400px; 
+  left: 65px;
+  z-index:2;
+  font-size:200%
+}
+a{
+  text-decoration: none !important;
+}
+.texteQuizz{
+  font-size: 25px;
+  text-align: center;
+  font-weight: bolder;
+}
 
 /** TEXT ALIGN **/
 
@@ -193,46 +237,6 @@ p.infoBulle{
 .citronCategorie{
   max-width: 30%;
   margin-right: 10%;
-}
-
-.boutonQuizz{
-  margin-top: 15%;
-}
-.nb{
-  position:absolute;
-  top:375px; 
-  width:500px; 
-  height:400px; 
-  left: 65px;
-  z-index:2;
-  font-size:200%
-}
-.nb1{
-  position:absolute;
-  top:59%; 
-  width:500px; 
-  height:400px; 
-  left: 65px;
-  z-index:2;
-  font-size:200%
-}
-.nb2{
-  position:absolute;
-  top:76%; 
-  width:500px; 
-  height:400px; 
-  left: 65px;
-  z-index:2;
-  font-size:200%
-}
-.nb3{
-  position:absolute;
-  top:94%; 
-  width:500px; 
-  height:400px; 
-  left: 65px;
-  z-index:2;
-  font-size:200%
 }
 
 #logoAccueil{
@@ -320,7 +324,9 @@ button.btn-warning:hover{
   border-color: var(--color3);
   color: var(--color6);
 }
-
+.boutonQuizz{
+  margin-top: 15%;
+}
 
 
 /* INPUT */
