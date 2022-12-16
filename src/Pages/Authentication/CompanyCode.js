@@ -58,11 +58,12 @@ const CompanyCode = () => {
                             </label>
                             <div className="d-grid gap-4 col-12 mx-auto mt-3">
                                 <input className="btn btn-primary" type="submit" value="Continuer" />
-                                <button className="btn btn-warning" onClick={e => navigate("/")}>Devenir partenaire Lemontri</button>
+                                <button className="btn btn-warning" onClick={e => navigate("/devis")}>Devenir partenaire Lemontri</button>
                             </div>
                             
                         </div>
                     </form>
+                </div>
             </Container>
         </div>
     )
