@@ -3,6 +3,9 @@ import {createUserWithEmailAndPassword, sendEmailVerification } from "firebase/a
 import { auth, db } from "../../firebase/firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useLocation, useNavigate} from "react-router-dom";
+import {Container} from 'react-bootstrap';
+import citronJoie from "../../img/Happy_Zesty.webp";
+
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -15,11 +18,11 @@ const SignUp = () => {
     const companyCode = location.state === null ? null : location.state.companyCode;
 
     useEffect(() => {
-        if(auth.currentUser !== null) {
+        if(auth.currentUser !== null && auth.currentUser.emailVerified !== false) {
             //Redirection vers la page d'accueil
             navigate('/accueil');
         }
-        if(companyCode === null) {
+        else if(companyCode === null) {
             navigate('/company-code');
         }
     })
@@ -32,7 +35,8 @@ const SignUp = () => {
                 name: name,
                 lastname: lastname,
                 email: email,
-                companyCode: companyCode
+                companyCode: companyCode,
+                rank: 1
             });
             await sendEmailVerification(userRecord.user);
             await auth.signOut();
@@ -45,26 +49,44 @@ const SignUp = () => {
 
     return (
         <div>
-            <form onSubmit={e => createUser(e, email, password, name, lastname)}>
-                <label>
-                    Nom:
-                    <input type="text" value={lastname} onChange={e => setLastname(e.target.value)} />
-                </label>
-                <label>
-                    Prénom:
-                    <input type="text" value={name} onChange={e => setName(e.target.value)} />
-                </label>
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-                </label>
-                <label>
-                    Mot de passe:
-                    <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-                </label>
-                <input type="submit" value="Finaliser le compte" />
-            </form>
-            <button onClick={e => navigate("/")}>Revenir à l'accueil</button>
+            <Container className="w-100 mx-auto">  
+                <div className="d-flex">
+                    <img className="citronJoie img-fluid img-thumbnai" src={citronJoie}  alt="test"></img>
+                    <div className="infoBulle1 text-center">
+                        Vous avez réussi la première étape. Il ne reste plus qu’à renseigner les informations utiles pour vous connaître.
+                        <br/>Nos citrons sont pressés de vous connaître ! 
+                    </div>
+                </div>
+                <div className="d-grid gap-4 col-10 mx-auto">
+                    <form onSubmit={e => createUser(e, email, password, name, lastname)}>
+                        <div className="text-start mx-5">
+                            <label className="form-label">
+                                Nom :
+                                <input className="champRemplir form-control" type="text" value={lastname} onChange={e => setLastname(e.target.value)} />
+                            </label>
+                            <label className="form-label">
+                                Prénom :
+                                <input className="champRemplir form-control" type="text" value={name} onChange={e => setName(e.target.value)} />
+                            </label>
+                            <label className="form-label">
+                                Email :
+                                <input className="champRemplir form-control" type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                            </label>
+                            <label className="form-label">
+                                Mot de passe :
+                                <input className="champRemplir form-control" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                            </label>
+                        </div>
+                        <div className="d-grid gap-4 col-10 mx-auto mt-3">
+                            <input className="btn btn-primary" type="submit" value="Finaliser le compte" />
+                            <button className="btn btn-warning" onClick={e => navigate("/")}>Revenir à l'accueil</button>
+                        </div>
+                        
+                    </form>
+                    
+                </div>
+                
+            </Container>
         </div>
 
 
