@@ -340,15 +340,7 @@ button.btn-warning:hover{
 .boutonQuizz{
   margin-top: 15%;
 }
-.boutonRetour{
-  background-color: var(--color1);
-  position: absolute;
-  width: 100%;
-  height: 60px;
-  top: 0;
-  left: 0;
-  padding: 0 1rem;
-}
+
 
 
 /* INPUT */
