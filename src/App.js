@@ -9,12 +9,13 @@ import CompanyCode from "./Pages/Authentication/CompanyCode";
 import EmailVerification from "./Pages/Authentication/EmailVerification";
 import Devis from './Pages/Devis';
 import Lesaviezvous from './Pages/Lesaviezvous';
-import Cours from './Pages/Cours';
+import Cours from './Pages/Cours/Cours';
 import Profil from './Pages/Profil';
+import Quizzes from './Pages/Game/Quizzes';
 import Accueil from './Pages/Accueil';
 import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
 import NavbarLayout from "./Components/NavbarLayout";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import CoursUnitaire from "./Pages/Cours/CoursUnitaire";
 
 const App = () => {
   const [deconnexion, setDeconnexion] = useState(null);
@@ -37,12 +38,14 @@ const App = () => {
             <Route path="/company-code" element={<CompanyCode/>} />
             <Route path="/email-verification" element={<EmailVerification/>} />
             <Route path="/devis"  element={<Devis/>} />
+            <Route path="/quizzes" element={<Quizzes/>} />
             {/* <Route path="/lesaviezvous" element={<Lesaviezvous/>} /> */}
-            {/* <Route path="/cours" element={<Cours/>} /> */}
             {/* <Route path="/profil" element={ <Profil/>} />  */}
             <Route element={<NavbarLayout/>}>
               <Route path="/accueil" element={<Accueil/>} />
               <Route path="/chatbot" element={<LemontriChatBot/>}/>
+              <Route path="/cours" element={<Cours/>}/>
+              <Route path="/cours/:id" element={<CoursUnitaire/>}/>
             </Route>
           </Routes>
       </Router>

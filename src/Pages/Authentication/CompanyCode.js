@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import {Link, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import {auth, db} from "../../firebase/firebase";
+import {FaChevronLeft} from "react-icons/fa";
 
 
 const CompanyCode = () => {
@@ -11,6 +12,7 @@ const CompanyCode = () => {
     useEffect(() => {
         if(auth.currentUser !== null) {
             //Redirection vers la page d'accueil
+            navigate('/accueil');
         }
     });
 
@@ -32,6 +34,10 @@ const CompanyCode = () => {
 
     return (
         <div>
+            <div class="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/sign-in")}>
+                <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+                <p class="retour hoverCursor">Retour</p>
+            </div> 
             <form onSubmit={e => checkCompanyCode(e, companyCode)}>
                 <label>
                     Code entreprise:
@@ -39,8 +45,7 @@ const CompanyCode = () => {
                 </label>
                 <input type="submit" value="Continuer" />
             </form>
-            <button onClick={e => navigate("/")}>Devenir partenaire Lemontri</button>
-            <span onClick={e => navigate("/")}>Revenir à l'accueil</span>
+            <button onClick={e => navigate("/devis")}>Devenir partenaire Lemontri</button>
         </div>
     )
 };

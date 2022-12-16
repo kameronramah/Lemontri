@@ -17,6 +17,7 @@ const SignUp = () => {
     useEffect(() => {
         if(auth.currentUser !== null) {
             //Redirection vers la page d'accueil
+            navigate('/accueil');
         }
         if(companyCode === null) {
             navigate('/company-code');
