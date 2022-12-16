@@ -4,7 +4,6 @@ import {auth} from "../firebase/firebase";
 import lemontri from '../img/lemontri.png';
 import citronBallon from '../img/ballons.webp'
 import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Devis from "./Devis";
 
 
 const Accueil = () => {
@@ -45,13 +44,13 @@ const Accueil = () => {
                     </p>
                     <div class="flex-col space-bet mt-3">
                         <button class="btn btn-primary" onclick={() => {navigate('/Devis')}}>CONTACTER LEMONTRI </button>
-                        <button class="btn btn-warning" onclick={() => navigate('https://lemontri.fr')}>ALLER SUR LE SITE</button> 
+                        <Link  class="btn btn-warning" to="https://lemontri.fr">ALLER SUR LE SITE</Link>
                     </div>
                 </div>
                 
                 <div class="flex-col center mt-5">
                     <h2>Vous avez déjà un compte ?</h2>
-                    <button class="btn btn-warning" onclick={() => navigate('/sign-in')}>CONNECTER</button>
+                    <button class="btn btn-warning" onclick={() => navigate('/sign-in')}>SE CONNECTER</button>
                 </div>
             </div>
         </div>
