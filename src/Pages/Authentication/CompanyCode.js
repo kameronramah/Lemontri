@@ -12,7 +12,7 @@ const CompanyCode = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(auth.currentUser !== null) {
+        if(auth.currentUser !== null && auth.currentUser.emailVerified !== false) {
             //Redirection vers la page d'accueil
             navigate('/accueil');
         }
@@ -37,9 +37,9 @@ const CompanyCode = () => {
     return (
         <div>
             <Container className="w-100 mx-auto">  
-                <div class="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/sign-in")}>
-                    <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
-                    <p class="retour hoverCursor">Retour</p>
+                <div className="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/sign-in")}>
+                    <div className="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+                    <p className="retour hoverCursor">Retour</p>
                 </div> 
                 
                 <div>

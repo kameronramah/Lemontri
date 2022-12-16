@@ -13,7 +13,7 @@ const SignIn = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(auth.currentUser !== null) {
+        if(auth.currentUser !== null && auth.currentUser.emailVerified === true) {
             //Redirection vers la page d'accueil
             navigate('/accueil');
         }
@@ -39,9 +39,9 @@ const SignIn = () => {
     return (
         <div>
             <Container className="w-100 mx-auto">
-                <div class="boutonRetour d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/")}>
-                    <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
-                    <p class="retour hoverCursor">Retour</p>
+                <div className="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/")}>
+                    <div className="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+                    <p className="retour hoverCursor">Retour</p>
                 </div> 
                 
                 <img className="img-fluid img-thumbnai w-70 mt-5" src={groupeEco}  alt="test"></img>

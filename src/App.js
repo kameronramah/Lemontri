@@ -10,7 +10,7 @@ import EmailVerification from "./Pages/Authentication/EmailVerification";
 import Devis from './Pages/Devis';
 import Lesaviezvous from './Pages/Lesaviezvous';
 import Cours from './Pages/Cours/Cours';
-import Profil from './Pages/Profil';
+import Profil from './Pages/Profil/Profil';
 import Quizzes from './Pages/Game/Quizzes';
 import QuizzHome from './Pages/Game/QuizzHome';
 import Accueil from './Pages/Accueil';
@@ -48,6 +48,7 @@ const App = () => {
               <Route path="/chatbot" element={<LemontriChatBot/>}/>
               <Route path="/cours" element={<Cours/>}/>
               <Route path="/cours/:id" element={<CoursUnitaire/>}/>
+              <Route path="/profil" element={<Profil/>} />
               <Route path="/quizzhome" element={<QuizzHome/>}/>
             </Route>
           </Routes>

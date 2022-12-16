@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore";
-import {auth, db} from "../../firebase/firebase";
-import {Link, useNavigate} from 'react-router-dom';
+import { db} from "../../firebase/firebase";
+import {Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,12 +9,8 @@ import './style/Cours.css';
 
 const Cours = () => {
     const [cours, setCours] = useState([]);
-    const navigate = useNavigate();
 
     useEffect(() => {
-        if(auth.currentUser !== null && auth.currentUser.emailVerified === false) {
-            navigate('/');
-        }
         getLessons().then(lessons => {
             setCours(lessons);
         });

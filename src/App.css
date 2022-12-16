@@ -464,3 +464,11 @@ input.champRemplir{
 .quiz{
   margin-top: 20%;
 }
+.profil-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-image: url("./img/Jardin_1.webp");
+  background-size: cover;
+}
