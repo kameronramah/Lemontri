@@ -58,7 +58,7 @@ const Devis = () => {
           <img className="citronBureau img-fluid img-thumbnai" src={citronBureau}  alt="test"></img>
           <div className="infoBulle2 text-center">
             Laissez vos coordonnées pour que l’équipe de LemonTri vous contacte. 
-            <br/>Nous sommes préssés de faire votre connaissance
+            <br/>Nous sommes pressés de faire votre connaissance !
           </div>    
         </div>
     </Container>
