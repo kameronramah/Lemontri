@@ -238,6 +238,7 @@ button.btn{
 button.btn-primary,
 input.btn-primary{
   background-color: var(--color1);
+  border-color: var(--color1);
   font-size: 20px;
 }
 button.btn-warning{
@@ -246,16 +247,28 @@ button.btn-warning{
 }
 button.btn-primary:hover{
   background-color: var(--color2);
+  border-color: var(--color2);
+  color: var(--color6);
+}
+p.btn-primary{
+  border-color: var(--color1);
+}
+p.btn-primary:hover{
+  background-color: var(--color2);
+  border-color: var(--color2);
   color: var(--color6);
 }
 input.btn-primary:hover{
   background-color: var(--color2);
+  border-color: var(--color2);
   color: var(--color6);
 }
 button.btn-warning:hover{
   background-color: var(--color3);
+  border-color: var(--color3);
   color: var(--color6);
 }
+
 
 
 /* INPUT */
