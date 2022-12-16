@@ -50,7 +50,7 @@ const SignUp = () => {
         <div>
             <Container className="w-100 mx-auto">  
                 <div className="d-flex">
-                    <img className="citronJoie img-fluid img-thumbnai" src={citronJoie}  alt="test"></img>
+                    <img className="citronJoie img-fluid img-thumbnai" src={citronJoie}  alt="Citron Joyeux"></img>
                     <div className="infoBulle1 text-center">
                         Vous avez réussi la première étape. Il ne reste plus qu’à renseigner les informations utiles pour vous connaître.
                         <br/>Nos citrons sont pressés de vous connaître ! 
