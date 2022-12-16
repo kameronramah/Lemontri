@@ -11,6 +11,7 @@ import Devis from './Pages/Devis';
 import Lesaviezvous from './Pages/Lesaviezvous';
 import Cours from './Pages/Cours/Cours';
 import Profil from './Pages/Profil';
+import Quizzes from './Pages/Game/Quizzes';
 import Accueil from './Pages/Accueil';
 import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
 import NavbarLayout from "./Components/NavbarLayout";
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/company-code" element={<CompanyCode/>} />
             <Route path="/email-verification" element={<EmailVerification/>} />
             <Route path="/devis"  element={<Devis/>} />
+            <Route path="/quizzes" element={<Quizzes/>} />
             {/* <Route path="/lesaviezvous" element={<Lesaviezvous/>} /> */}
             {/* <Route path="/profil" element={ <Profil/>} />  */}
             <Route element={<NavbarLayout/>}>
