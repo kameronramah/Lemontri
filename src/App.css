@@ -4,6 +4,10 @@
 
 /** GLOBAL DATA **/
 
+html, body {
+  height: 100%;
+}
+
 :root{
   --color1:#069B3E;
   --color2:#408C32;
