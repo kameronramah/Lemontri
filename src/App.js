@@ -13,7 +13,7 @@ import Lesaviezvous from './Pages/Lesaviezvous';
 import Cours from './Pages/Cours';
 import Profil from './Pages/Profil';
 import Quizzes from './Pages/Game/Quizzes';
-
+import QuizzHome from './Pages/Game/QuizzHome';
 import Accueil from './Pages/Accueil';
 import LemontriChatBot from "./Pages/Chatbot/LemontriChatBot";
 
@@ -47,6 +47,7 @@ const App = () => {
             {/* <Route path="/profil" element={ <Profil/>} />  */}
             <Route path="/accueil" element={<Accueil/>} />
             <Route path="/chatbot" element={<LemontriChatBot/>}/>
+            <Route path="/quizzhome" element={<QuizzHome/>}/>
 
           </Routes>
       </Router>
