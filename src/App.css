@@ -179,6 +179,15 @@ p.infoBulle{
   z-index:2;
   font-size:200%
 }
+.nbAutre{
+  position:absolute;
+  top:15%; 
+  width:500px; 
+  height:400px; 
+  left: 49%;
+  z-index:2;
+  font-size:200%
+}
 a{
   text-decoration: none !important;
 }
@@ -237,6 +246,10 @@ a{
 .citronCategorie{
   max-width: 30%;
   margin-right: 10%;
+}
+.citronCategories{
+  max-width: 30%;
+  margin-left: 35%;
 }
 
 #logoAccueil{
@@ -326,6 +339,15 @@ button.btn-warning:hover{
 }
 .boutonQuizz{
   margin-top: 15%;
+}
+.boutonRetour{
+  background-color: var(--color1);
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  padding: 0 1rem;
 }
 
 
@@ -444,4 +466,9 @@ input.champRemplir{
 
 .hoverCursor:hover{
   cursor:pointer;
+}
+
+/* autre */
+.quiz{
+  margin-top: 20%;
 }

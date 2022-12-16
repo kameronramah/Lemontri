@@ -39,7 +39,7 @@ const SignIn = () => {
     return (
         <div>
             <Container className="w-100 mx-auto">
-                <div class="d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/")}>
+                <div class="boutonRetour d-flex justify-content-left align-items-baseline mt-3" onClick={e => navigate("/")}>
                     <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
                     <p class="retour hoverCursor">Retour</p>
                 </div> 

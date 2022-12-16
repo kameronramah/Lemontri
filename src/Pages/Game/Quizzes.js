@@ -2,6 +2,8 @@ import { Container } from 'react-bootstrap';
 import React, { useState ,  useEffect  } from 'react';
 import {useNavigate} from "react-router-dom";
 import citronJoie from "../../img/Happy_Zesty.webp";
+import {FaChevronLeft} from "react-icons/fa";
+import citronQuizz from "../../img/citronQuizz.webp";
 
 
 export default function App() {
@@ -70,31 +72,36 @@ export default function App() {
 	return (
 		<div className='app'>
 			<Container className='w-100 mx-auto'>
-				<div className='boutonRetour'>
-					<button className='btn btn-warning ' onClick={e => navigate('/QuizzHome')}>RETOUR A LA LISTE</button>
+				<div class="boutonRetour d-flex justify-content-left align-items-baseline" onClick={e => navigate("/")}>
+                    <div class="d-flex justify-content-center align-items-center backButton hoverCursor"><FaChevronLeft /></div>
+                    <p class="retour hoverCursor">Retour</p>
+                </div> 
+				<div className='quiz'>
+					<img className="citronCategories img-fluid img-thumbnai" src={citronQuizz}  alt="test"></img>
+					<p className='nbAutre'>1</p>
+					<h2>Les différentes poubelles</h2>
+					{/* <p>{tempsRestant}</p> */}
+					{showScore ? (
+						<div className='score-section'>
+							Vous avez bien répondu à {score} questions sur {questions.length}.
+						</div>
+					) : (
+						<>
+							<div className='question-section'>
+								<div className='question-count'>
+									<span>Question {currentQuestion + 1}</span>/{questions.length}
+								</div>
+								<div className='question-text'>{questions[currentQuestion].questionText}</div>
+							</div>
+							<div className='answer-section'>
+								{questions[currentQuestion].answerOptions.map((answerOption) => (
+									<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+								))}
+							</div>
+						</>
+					)}
 				</div>
 				
-				<h2>Les différentes poubelles</h2>
-				{/* <p>{tempsRestant}</p> */}
-				{showScore ? (
-					<div className='score-section'>
-						Vous avez bien répondu à {score} questions sur {questions.length}.
-					</div>
-				) : (
-					<>
-						<div className='question-section'>
-							<div className='question-count'>
-								<span>Question {currentQuestion + 1}</span>/{questions.length}
-							</div>
-							<div className='question-text'>{questions[currentQuestion].questionText}</div>
-						</div>
-						<div className='answer-section'>
-							{questions[currentQuestion].answerOptions.map((answerOption) => (
-								<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-							))}
-						</div>
-					</>
-				)}
 			</Container>
             
         </div>
