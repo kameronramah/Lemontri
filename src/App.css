@@ -2,20 +2,42 @@
 @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 @import url('https://fonts.cdnfonts.com/css/roboto');
 
-/** GENERAL **/
-html,
-body,
-.root,
-.react-chatbot-kit-chat-container,
-.react-chatbot-kit-chat-inner-container,
-.react-chatbot-kit-chat-message-container {
-  height: 100% !important;
+/** GLOBAL DATA **/
+
+:root{
+  --color1:#069B3E;
+  --color2:#408C32;
+  --color3:#fFCC07;
+  --color4:#969696;
+  --color5:#4B4B4B;
+  --color6:#FFFFFF; 
 }
 
+.titre1{
+  font-family: BebasNeueRegular ;
+  color: var(--color1) ;
+  text-transform : uppercase;
+}
+p, 
+.btn{
+  font-family: RobotoBold;
+}
+.btn{
+  color: var(--color6);
+}
+.btn-primary{
+  background-color: var(--color1);
+  font-size: 20px;
+}
+.btn-warning{
+  background-color: var(--color3);
+  font-size: 20px;
+}
+
+/** GENERAL **/
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -111,7 +133,15 @@ h2{
 
 p{
   font-family: 'Roboto', sans-serif;
-  color : #4B4B4B;
+  color: var(--color5);
+}
+
+span{
+  font-family: 'Roboto', sans-serif;
+  color: var(--color5);
+}
+p.infoBulle{
+  color: var(--color6) !important;
 }
 
 /** TEXT ALIGN **/
@@ -119,6 +149,7 @@ p{
 .text-align-c{
   text-align: center;
 }
+
 
 /** IMAGES **/
 .logoLemonTri{
@@ -133,9 +164,31 @@ p{
   right: 0px;
   transform: rotate(-5deg) ;
 }
+.img-fluid {
+  max-width: 90%;
+  height: auto;
+}
+.citronTri{
+  margin-top: 20%;
+}
+.citronJoie{
+  max-width: 60% !important;
+  margin-left: 50%;
+  margin-top: 20%;
+  z-index: 1;
+}
+.citronBureau{
+  max-width: 50%;
+  margin-right: 100%;
+  margin-top: 54%;
+}
+.citronAvocat{
+  max-width: 60%;
+  margin-top: 15%;
+}
 
 #logoAccueil{
-  align-self: center;
+  justify-self: center;
 }
 
 /** MARGINS **/
@@ -154,7 +207,11 @@ p{
 
 /** PAGE ACCUEIL **/
 .titleAccueil{
-  width: 60%;
+  max-width: 60%;
+}
+
+#sec-Accueil{
+  margin-top : 20%;
 }
 
 /** DISPLAY FLEX **/
@@ -178,3 +235,146 @@ p{
   align-items: center;
 }
 
+/* LES BOUTONS */
+button.btn{
+  color: var(--color6);
+}
+button.btn-primary,
+input.btn-primary{
+  background-color: var(--color1);
+  font-size: 20px;
+}
+button.btn-warning{
+  background-color: var(--color3);
+  font-size: 20px;
+}
+button.btn-primary:hover{
+  background-color: var(--color2);
+  color: var(--color6);
+}
+input.btn-primary:hover{
+  background-color: var(--color2);
+  color: var(--color6);
+}
+button.btn-warning:hover{
+  background-color: var(--color3);
+  color: var(--color6);
+}
+
+
+/* INPUT */
+input.champRemplir{
+  width: 240px;
+  height: 30px;
+  left: 60px;
+  top: 306px;
+
+  background: #D9D9D9;
+  box-shadow: 0px 2px 1px #408C32;
+  border-radius: 5px;
+  color: var(--color5);
+}
+
+/* Retour  */
+.backButton{
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--color3);
+}
+
+/* info Bulle */
+.infoBulle{
+  background: var(--color1);
+  border-radius: 30px;
+  top: 9%;
+  left: 6%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 80%;
+  color: var(--color6);
+}
+.infoBulle::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(-20deg);
+  bottom: -32px;
+  content: "";
+  left: 60%;
+  position: absolute;
+  z-index: 99;
+}
+
+.infoBulle1{
+  background: var(--color1);
+  border-radius: 30px;
+  top: 10%;
+  left: 2%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 54%;  
+  color: var(--color6);
+}
+.infoBulle1::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(-100deg);
+  bottom: 50px;
+  content: "";
+  left: 95%;
+  position: absolute;
+} 
+.infoBulle2{
+  background: var(--color1);
+  border-radius: 30px;
+  bottom: 15%;
+  right: 2%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 54%;  
+  color: var(--color6);
+}
+.infoBulle2::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(50deg);
+  bottom: 5px;
+  content: "";
+  right: 93%;
+  position: absolute;
+} 
+.infoBulle3{
+  background: var(--color1);
+  border-radius: 30px;
+  top: 7%;
+  right: 2%;
+  padding: 5px 15px;
+  position: absolute;
+  width: 50%;  
+  color: var(--color6);
+}
+.infoBulle3::after{
+  border: solid;
+  border-color: var(--color1) transparent;
+  border-width: 39px 17px 0 20px;
+  transform: rotate(58deg);
+  bottom: -10px;
+  content: "";
+  right: 92%;
+  position: absolute;
+} 
+/* Retour */
+.retour{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color : var(--color5);
+  padding-left: 10px;
+}
+
+.hoverCursor:hover{
+  cursor:pointer;
+}
